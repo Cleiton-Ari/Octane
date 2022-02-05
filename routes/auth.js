@@ -15,12 +15,17 @@ const User = require("../models/User.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
+<<<<<<< HEAD
 //CETTE ROUTE MARCHE
 router.get("/loggedin", (req, res, next) => {
   if (req.user) {
     res.status(200).json(req.user);
   }
   //res.json(req.user);
+=======
+router.get("/loggedin", (req, res, next) => {
+  res.json(req.user);
+>>>>>>> c595123f083bbef2bf62c174da49cac764fce874
 });
 
 router.post("/signup", isLoggedOut, (req, res) => {

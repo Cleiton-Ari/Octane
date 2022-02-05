@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+
  
 
-function Navbar(){
+function Navbar() {
     return(
         <nav>
-            <img src={"logo-actane.jpg"} />
+            <img src='../../public/logo-octane.JPG' />
             <ul className="liste">
                 <li className="items">
                     <Link to="/Signup">Signup</Link>

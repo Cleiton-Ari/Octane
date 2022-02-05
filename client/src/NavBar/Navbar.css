@@ -1,0 +1,16 @@
+nav{
+    height: 50px;
+    background: grey;
+}
+
+.liste{
+    list-style-type: none;
+    background: blue;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.items{
+    cursor: pointer;
+}

@@ -1,13 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import NavBar from './NavBar/Navbar';
 
 
 
 function HomePage() {
     return(
-        <div className="HomePage">
+        <div>
+        
             <h1>Homepage</h1> 
-            <p>hello</p>    
+            <p>hello</p>  
+              
         </div>
     )
 }

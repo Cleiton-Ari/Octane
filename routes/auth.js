@@ -1,3 +1,4 @@
+const express = require("express");
 const router = require("express").Router();
 
 // ℹ️ Handles password encryption
@@ -14,8 +15,12 @@ const User = require("../models/User.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-router.get("/loggedin", (req, res) => {
-  res.json(req.user);
+//CETTE ROUTE MARCHE
+router.get("/loggedin", (req, res, next) => {
+  if (req.user) {
+    res.status(200).json(req.user);
+  }
+  //res.json(req.user);
 });
 
 router.post("/signup", isLoggedOut, (req, res) => {

@@ -8,7 +8,7 @@ require("./db");
 // Handles http requests (express is node js framework)
 // https://www.npmjs.com/package/express
 //const express = require("express");
-
+const express = require('express');
 const app = express();
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
@@ -18,9 +18,16 @@ require("./config")(app);
 // Contrary to the views version, all routes are controlled from the routes/index.js
 //const allRoutes = require("./routes");
 //app.use("/api", allRoutes);
+const allRoutes = require('./routes');
+app.use('/api', allRoutes);
 
-const authRoutes = require('./routes/auth');
-app.use('/api', authRoutes);
+const auth = require('./routes/auth');
+app.use('/api', auth);
+
+const jetskiRoutes = require('./routes/jetski')
+app.use('/api', jetskiRoutes);
+
+
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

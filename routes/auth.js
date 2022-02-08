@@ -1,6 +1,10 @@
 const express = require('express');
-//const router = require("express").Router();
-const authRoutes = express.router();
+const router = require("express").Router();
+const bcryptjs = require('bcryptjs');
+const saltRounds = 10;
+const salt = bcryptjs.genSaltSync(saltRounds); // hass the password
+const User = require("../models/User.model");
+
 
 
 // ℹ️ Handles password encryption
@@ -8,15 +12,117 @@ const bcrypt = require("bcryptjs");
 const mongoose = require("mongoose");
 
 // How many rounds should bcrypt run the salt (default [10 - 12 rounds])
-const saltRounds = 10;
+
 
 
 // Require the User model in order to interact with the database
-const User = require("../models/User.model");
+//const User = require("../models/User.model");
 
 // Require necessary (isLoggedOut and isLiggedIn) middleware in order to control access to specific routes
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
+
+
+
+router.post('/signup', (req, res, next) => {
+  const firstname = req.body.firstname;
+  const lastname = req.body.lastname;
+  const email = req.body.email;
+  const password = req.body.password;
+
+  if (!firstname & !lastname & !email || !password) {
+    res.status(400).json( { message: 'Merci de saisir vos identifiant à nouveau' });
+    return;
+  }
+   // regarde la longueur du password
+  if (password.length < 6){
+   
+   res.status(400).json({ message: 'Vous devez avoir au moins 6 caractères.'});
+   return;
+   
+ }
+
+})
+
+
+
+router.get('/test', (req, res, next) =>{
+ res.status(200).json({message: 'merci'})
+})
+
+//  2- se logger sur son comppte 
+router.post("/auth/login", (req, res, next) => {
+ const { firstname, password } = req.body;
+
+ if (!firstname) {
+   return 
+   res.status(400).json({ errorMessage: "Votre prénom est incorrect veuillez le corriger!" });
+ }
+
+ User.findOne({ firstname })
+   .then((user) => {
+     // If the user isn't found, send the message that user provided wrong credentials
+     if (!user) {
+      res.status(400).json({ errorMessage: "username does not exist" });
+      return;
+     }
+
+
+     const salt = bcrypt.genSaltSync(bcryptSalt);
+     const hassPass = bcrypt.hashSync(password, salt);
+     bcryptjs.compareSync(password, user.password)  //compare le password sur la db de l'utilisateur
+     if(bcryptjs.compareSync(password, user.password)) {
+       res.status(200).json({message: 'Bravo'}) 
+       return;
+     }
+     res.status(400).json({message: 'wrong password.'})
+     return;
+    
+   })
+
+   .catch((err) => {
+     // in this case we are sending the error handling to the error handling middleware that is defined in the error handling file
+     // you can just as easily run the res.status that is commented out below
+     next(err);
+     // return res.status(500).render("login", { errorMessage: err.message });
+   });
+
+})
+
+
+// 3- rester connecté
+router.get("/loggedin", (req, res, next) => {
+ if (req.user) {
+   res.status(200).json(req.user);
+   return;
+ }
+});
+
+ // 4- res.json(req.user);
+
+// Déconnexion
+router.get("/logout", (req, res) => {
+ req.logout();
+ res.status(204).send();
+});
+
+// 5- réservation
+router.post("/reservation", (req, res, next) => {
+ if (req.User_id, User_inSession ){
+   res.status(200).json(req.User_id, User_inSession)
+ }
+});
+
+
+router.post("/formlocation", (req, res, next) => {
+ if (req.user){
+   res.status(200).json(req.user)
+ }
+})
+
+
+
+module.exports = router;
 
 /*
 router.post("/signup", isLoggedOut, (req, res) => {
@@ -45,12 +151,12 @@ router.post("/signup", isLoggedOut, (req, res) => {
     });
   }
   */
-
+/*
   // Search the database for a user with the username submitted in the form
-  User.findOne({ username }).then((found) => {
+  User.findOne({ firstname }).then((found) => {
     // If the user is found, send the message username is taken
     if (found) {
-      return res.status(400).json({ errorMessage: "Username already taken." });
+      return res.status(400).json({ errorMessage: "firstname already taken." });
     }
 
     // if user is not found, create a new user - start with hashing the password
@@ -93,45 +199,8 @@ const login = require('./routes/login');
 app.use('/', login);
 */
 
- authRoutes.post('/signup', (req, res, next) => {
-   const firstname = req.body.firstname;
-   const lastname = req.body.lastname;
-   const email = req.body.email;
-   const password = req.body.password;
 
-   if (!firstname & !lastname & !email || !password) {
-     res.status(400).json( { message: 'Merci de saisir vos identifiant à nouveau' });
-     return;
-   }
-    // regarde la longueur du password
-   if (password.length < 6){
-    return 
-    res.status(400).json({ message: 'Vous devez avoir au moins 6 caractères.'});
-    
-  }
 
- })
-
- //  2- se logger sur son comppte 
-router.post("/login", isLoggedOut, (req, res, next) => {
-  const { firstname, password } = req.body;
-
-  if (!firstname) {
-    return 
-    res.status(400).json({ errorMessage: "Votre prénom est incorrect veuillez le corriger" });
-  }
-
-})
-
-// 3- rester connecté
-router.get("/loggedin", (req, res, next) => {
-  if (req.user) {
-    res.status(200).json(req.user);
-    return;
-  }
-});
-
-  //res.json(req.user);
 
 
 
@@ -143,7 +212,7 @@ router.get("/loggedin", (req, res, next) => {
       errorMessage: "Your password needs to be at least 8 characters long.",
     });
   }*/
-
+/*
   // Search the database for a user with the username submitted in the form
   User.findOne({ username })
     .then((user) => {
@@ -178,6 +247,6 @@ router.get("/logout", isLoggedIn, (req, res) => {
     }
     res.json({ message: "Done" });
   });
-});
+})
+*/
 
-module.exports = router;

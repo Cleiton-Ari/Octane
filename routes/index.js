@@ -5,7 +5,6 @@ const authRoutes = require("./auth");
 router.get("/", (req, res, next) => {
   res.json("All good in here");
 });
-
 router.use("/auth", authRoutes);
 
 

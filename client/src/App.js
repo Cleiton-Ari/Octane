@@ -9,7 +9,7 @@ import {Switch, Route} from 'react-router-dom'
 
 
 
->>>>>>> c595123f083bbef2bf62c174da49cac764fce874
+
 
 function App() {
   return (

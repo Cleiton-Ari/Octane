@@ -1,5 +1,7 @@
-const express = require("express");
-const router = require("express").Router();
+const express = require('express');
+//const router = require("express").Router();
+const authRoutes = express.router();
+
 
 // ℹ️ Handles password encryption
 const bcrypt = require("bcryptjs");
@@ -8,6 +10,7 @@ const mongoose = require("mongoose");
 // How many rounds should bcrypt run the salt (default [10 - 12 rounds])
 const saltRounds = 10;
 
+
 // Require the User model in order to interact with the database
 const User = require("../models/User.model");
 
@@ -15,19 +18,7 @@ const User = require("../models/User.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-<<<<<<< HEAD
-//CETTE ROUTE MARCHE
-router.get("/loggedin", (req, res, next) => {
-  if (req.user) {
-    res.status(200).json(req.user);
-  }
-  //res.json(req.user);
-=======
-router.get("/loggedin", (req, res, next) => {
-  res.json(req.user);
->>>>>>> c595123f083bbef2bf62c174da49cac764fce874
-});
-
+/*
 router.post("/signup", isLoggedOut, (req, res) => {
   const { username, password } = req.body;
 
@@ -44,7 +35,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
   }
 
   //   ! This use case is using a regular expression to control for special characters and min length
-  /*
+  
   const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
 
   if (!regex.test(password)) {
@@ -91,24 +82,67 @@ router.post("/signup", isLoggedOut, (req, res) => {
         return res.status(500).json({ errorMessage: error.message });
       });
   });
-});
 
-router.post("/login", isLoggedOut, (req, res, next) => {
-  const { username, password } = req.body;
 
-  if (!username) {
-    return res
-      .status(400)
-      .json({ errorMessage: "Please provide your username." });
+//  1-création de comppte 
+/*
+const signup = require('./routes/signup');
+app.use('/', signup);
+
+const login = require('./routes/login');
+app.use('/', login);
+*/
+
+ authRoutes.post('/signup', (req, res, next) => {
+   const firstname = req.body.firstname;
+   const lastname = req.body.lastname;
+   const email = req.body.email;
+   const password = req.body.password;
+
+   if (!firstname & !lastname & !email || !password) {
+     res.status(400).json( { message: 'Merci de saisir vos identifiant à nouveau' });
+     return;
+   }
+    // regarde la longueur du password
+   if (password.length < 6){
+    return 
+    res.status(400).json({ message: 'Vous devez avoir au moins 6 caractères.'});
+    
   }
 
-  // Here we use the same logic as above
+ })
+
+ //  2- se logger sur son comppte 
+router.post("/login", isLoggedOut, (req, res, next) => {
+  const { firstname, password } = req.body;
+
+  if (!firstname) {
+    return 
+    res.status(400).json({ errorMessage: "Votre prénom est incorrect veuillez le corriger" });
+  }
+
+})
+
+// 3- rester connecté
+router.get("/loggedin", (req, res, next) => {
+  if (req.user) {
+    res.status(200).json(req.user);
+    return;
+  }
+});
+
+  //res.json(req.user);
+
+
+
+
+  /* Here we use the same logic as above
   // - either length based parameters or we check the strength of a password
   if (password.length < 8) {
     return res.status(400).json({
       errorMessage: "Your password needs to be at least 8 characters long.",
     });
-  }
+  }*/
 
   // Search the database for a user with the username submitted in the form
   User.findOne({ username })
@@ -135,7 +169,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
       next(err);
       // return res.status(500).render("login", { errorMessage: err.message });
     });
-});
+
 
 router.get("/logout", isLoggedIn, (req, res) => {
   req.session.destroy((err) => {

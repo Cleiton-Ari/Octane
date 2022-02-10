@@ -21,57 +21,83 @@ const mongoose = require("mongoose");
 // Require necessary (isLoggedOut and isLiggedIn) middleware in order to control access to specific routes
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
+const { create } = require('connect-mongo');
 
 
 
 router.post('/signup', (req, res, next) => {
-  const firstname = req.body.firstname;
-  const lastname = req.body.lastname;
-  const email = req.body.email;
-  const password = req.body.password;
-
-  if (!firstname & !lastname & !email || !password) {
-    res.status(400).json( { message: 'Merci de saisir vos identifiant à nouveau' });
+  const { firstname, lastname, email, password } = req.body;
+  
+  if (!firstname || !lastname || !email || !password) {
+    res.status(400).json( { message: 'Merci de saisir vos identifiants à nouveau' });
     return;
   }
+
    // regarde la longueur du password
   if (password.length < 6){
    
    res.status(400).json({ message: 'Vous devez avoir au moins 6 caractères.'});
-   return;
-   
+   return; 
  }
+
+
+ User.findOne({email})
+    .then(userFromDb =>{    // cr
+     if (userFromDb === null) {
+       const hashPass = bcryptjs.hashSync(password, salt);
+       
+        User.create({ firstname, lastname, email, hashPass })
+          .then(createdUser =>{
+            res.status(200).json( {createdUser});
+            return;
+          })
+
+          .catch(err => {
+            res.status(400).json( {message: 'error creating user'});
+            return;
+          })
+     } else {
+        res.status(400).json({message: 'user exists déja'});
+        return;
+     }
+    
+      
+    })
+    .catch(error => {
+      res.status(400).json( {message: 'error validating email'});
+      return;
+    })
+
+ 
 
 })
 
 
-
+/*
 router.get('/test', (req, res, next) =>{
  res.status(200).json({message: 'merci'})
 })
+*/
+
 
 //  2- se logger sur son comppte 
 router.post("/auth/login", (req, res, next) => {
- const { firstname, password } = req.body;
+ const { email, password } = req.body;
 
- if (!firstname) {
-   return 
-   res.status(400).json({ errorMessage: "Votre prénom est incorrect veuillez le corriger!" });
- }
+ if (!email || !password) {
+   res.status(400).json({ errorMessage: "email or password missing" });
+    return;
+  }
 
- User.findOne({ firstname })
+ User.findOne({ email })
    .then((user) => {
      // If the user isn't found, send the message that user provided wrong credentials
      if (!user) {
       res.status(400).json({ errorMessage: "username does not exist" });
       return;
      }
-
-
-     const salt = bcrypt.genSaltSync(bcryptSalt);
-     const hassPass = bcrypt.hashSync(password, salt);
-     bcryptjs.compareSync(password, user.password)  //compare le password sur la db de l'utilisateur
-     if(bcryptjs.compareSync(password, user.password)) {
+ //compare le password sur la db de l'utilisateur
+     if(bcryptjs.compareSync(password, user.hashPass)) {
        res.status(200).json({message: 'Bravo'}) 
        return;
      }
@@ -153,10 +179,10 @@ router.post("/signup", isLoggedOut, (req, res) => {
   */
 /*
   // Search the database for a user with the username submitted in the form
-  User.findOne({ firstname }).then((found) => {
+  User.findOne({ ! }).then((found) => {
     // If the user is found, send the message username is taken
     if (found) {
-      return res.status(400).json({ errorMessage: "firstname already taken." });
+      return res.status(400).json({ errorMessage: "! already taken." });
     }
 
     // if user is not found, create a new user - start with hashing the password

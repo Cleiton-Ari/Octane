@@ -1,13 +1,13 @@
 import React from "react";
 import "./Carousel.css";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from 'react-router-dom';
 
-
-function Toto() {
+function Carousel() {
     return(
         <>
-            <p>TOTO PAGE</p>
+            <img src='../../public/carousel.jpeg' alt= "logo" className="carousel" />
+
+            <p>VIBREZ SUR NOS PLAGES CAPVERDIENNES</p>
         </>
     )
    
@@ -16,4 +16,4 @@ function Toto() {
 
 
 
-export default Toto;
+export default Carousel;

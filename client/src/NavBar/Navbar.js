@@ -10,7 +10,7 @@ function Navbar() {
             <ul className="liste">
             <img src='../../public/logo-octane.JPG' alt= "logo" className="navbar-logo" />
             <li className="items">
-                    <Link to="/Login">Blog</Link>
+                    <Link to="/Blog">Blog</Link>
                 </li>
 
                 <li className="items">

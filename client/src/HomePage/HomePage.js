@@ -1,14 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import NavBar from '../NavBar/Navbar';
-import Toto from '../Carousel/Carousel';
+import Carousel from '../Carousel/Carousel';
+import Footer from '../Footer/Footer';
 
 
 
 function HomePage() {
     return(
         <div>
-        <NavBar />       
+        <NavBar />  
+        <Carousel /> 
+        <Footer />    
         </div>
     )
 }

@@ -1,13 +1,18 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-
+import "./Navbar.css"
  
 
 function Navbar() {
     return(
         <nav>
-            <img src='../../public/logo-octane.JPG' />
+           
             <ul className="liste">
+            <img src='../../public/logo-octane.JPG' alt= "logo" className="navbar-logo" />
+            <li className="items">
+                    <Link to="/Login">Blog</Link>
+                </li>
+
                 <li className="items">
                     <Link to="/Signup">Signup</Link>
                 </li>

@@ -1,16 +1,23 @@
 nav{
-    height: 50px;
+    height: 80px;
     background: grey;
 }
 
 .liste{
     list-style-type: none;
-    background: blue;
+    background: rgb(5, 149, 233);
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .items{
     cursor: pointer;
+}
+
+.navbar-logo{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
 }

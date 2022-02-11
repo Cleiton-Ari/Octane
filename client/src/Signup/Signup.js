@@ -11,12 +11,21 @@ class Signup extends Component {
         email:"",
         password:"",
     }
+
     handleFormSubmit = (event)=>{
         event.preventDefault();
         const firstname= this.state.firstname;
-        const lasttname= this.state.lasttname;
+        const lastname= this.state.lastname;
         const email= this.state.email;
         const password= this.state.password;
+    }
+    handleChange = (event) =>{
+        const name = event.target.name;
+        const value = event.target.value;
+        this.setState({
+            [name]:value
+        })
+        
     }
    
     render(){
@@ -33,29 +42,29 @@ class Signup extends Component {
 
                     <p>
                     <label>
-                        <em>Firstname</em>
-                        <input type="text" name="firsname:" value={this.state.firsname} onChange={this.handleChange} />
+                        <em>Firstname: </em>
+                        <input type="text" name="firstname" value={this.state.firstname} onChange={this.handleChange} />
                     </label>
                     </p>
 
                     <p>
                     <label>
-                        <em>lastname</em>
-                        <input type="text" name="lastname:" value={this.state.lastname} onChange={this.handleChange} />
+                        <em>lastname: </em>
+                        <input type="text" name="lastname" value={this.state.lastname} onChange={this.handleChange} />
                     </label>
                     </p>
 
                     <p>
                     <label>
-                        <em>email</em>
-                        <input type="text" name="email:" value={this.state.email} onChange={this.handleChange} />
+                        <em>email: </em>
+                        <input type="text" name="email" value={this.state.email} onChange={this.handleChange} />
                     </label>
                     </p>
 
                     <p>
                     <label>
-                        <em>Password</em>
-                        <input type="password" name="password:" value={this.state.password} onChange={this.handleChange} />
+                        <em>Password: </em>
+                        <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
                     </label>
                     </p>
 

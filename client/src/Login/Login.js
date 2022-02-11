@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 import NavBar from '../NavBar/Navbar';
 
 
-class Login extends Component {
+class Login extends React.Component {
     state = {
-        username:"",
+        email:"",
         password:"",
 
         error: ""
@@ -13,7 +13,7 @@ class Login extends Component {
 
  handleFormSubmit = (event)=>{
             event.preventDefault();
-            const firstname= this.state.firstname;
+            const email= this.state.email;
             const password= this.state.password;
             const error = this.state.error;
 }
@@ -21,30 +21,29 @@ class Login extends Component {
 render(){
     return(
         <div>
-        <NavBar />  
+          <NavBar />  
        
-            <h1>Log in</h1>
+          <h1>Log in</h1>
 
-            <p>Vous avez un compte? Connectez-vous.</p>
+          <p>Vous avez un compte? Connectez-vous.</p>
 
-            <form onSubmit={this.handleFormSubmit}>
+          <form onSubmit={this.handleFormSubmit}>
 
             <p>
               <label>
-                <em>Firstname</em>
-                <input type="text" name="firsname" value={this.state.firsname} onChange={this.handleChange} />
+                <em>email: </em>
+                <input type="email:" name="email" value={this.state.email} onChange={this.handleChange} />
               </label>
             </p>
 
             <p>
               <label>
-                <em>Password</em>
+                <em>Password: </em>
                 <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
               </label>
             </p>
 
-          
-            </form>
+          </form>
         </div>
     )
   

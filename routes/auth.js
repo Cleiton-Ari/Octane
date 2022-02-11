@@ -97,10 +97,10 @@ router.post("/auth/login", (req, res, next) => {
       return;
      }
  //compare le password sur la db de l'utilisateur
-     if(bcryptjs.compareSync(password, user.hashPass)) {
+     if (bcryptjs.compareSync(password, user.hashPass)) {
        res.status(200).json({message: 'Bravo'}) 
        return;
-     }
+     } 
      res.status(400).json({message: 'wrong password.'})
      return;
     

@@ -38,9 +38,7 @@ class Signup extends Component {
     render(){
 
         return(
-            <div>
-
-            <NavBar />  
+            <div> 
                 <h1>Sign up</h1>
 
                     <p>INCRIVEZ-VOUS AVEC...</p>

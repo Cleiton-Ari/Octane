@@ -9,7 +9,6 @@ import Footer from '../Footer/Footer';
 function HomePage() {
     return(
         <div>
-        <NavBar />  
         <Carousel /> 
         <Footer />    
         </div>

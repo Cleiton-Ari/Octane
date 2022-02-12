@@ -5,13 +5,13 @@ import Signup from './Signup/Signup.js';
 import Login from './Login/Login.js';
 import {Switch, Route} from 'react-router-dom'
 import React, { Component } from "react";
-
+import NavBar from './NavBar/Navbar';
 
 
 function App() {
   return (
     <div className="App">
-
+      <NavBar />
      <Switch>
        <Route  path="/" exact component={HomePage} />
        <Route  path="/signup" exact component={Signup} />

@@ -35,7 +35,6 @@ class Login extends React.Component {
 render(){
     return(
         <div>
-          <NavBar />  
        
           <h1>Log in</h1>
 

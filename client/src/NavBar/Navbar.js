@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import "./Navbar.css"
+import logo from './logo-octane.jpg'
+import "./Navbar.css";
  
 
 function Navbar() {
@@ -8,7 +9,7 @@ function Navbar() {
         <nav>
            
             <ul className="liste">
-            <img src='../../public/logo-octane.JPG' alt= "logo" className="navbar-logo" />
+            <img src={logo} alt= "logotest" className="navbar-logo" />
             <li className="items">
                     <Link to="/Blog">Blog</Link>
                 </li>

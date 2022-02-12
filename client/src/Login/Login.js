@@ -70,8 +70,4 @@ render(){
 }
 
 
-
-
-
-
 export default Login;

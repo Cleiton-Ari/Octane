@@ -27,6 +27,8 @@ app.use('/api', auth);
 const jetskiRoutes = require('./routes/jetski')
 app.use('/api', jetskiRoutes);
 
+const reservation = require("./routes/reservation");
+app.use('/api', reservation);
 
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes

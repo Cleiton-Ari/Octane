@@ -132,13 +132,6 @@ router.get("/logout", (req, res) => {
  res.status(204).send();
 });
 
-// 5- réservation
-router.post("/reservation", (req, res, next) => {
- if (req.User_id, User_inSession ){
-   res.status(200).json(req.User_id, User_inSession)
- }
-});
-
 
 router.post("/formlocation", (req, res, next) => {
  if (req.user){

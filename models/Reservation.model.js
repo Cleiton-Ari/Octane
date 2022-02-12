@@ -19,20 +19,4 @@ const Reservation = mongoose.model("Reservation", reservationSchema);
 
 module.exports = Reservation;
 
-/*
-const reservationSchema = new Schema(
-  {
-    photo: {
-      type: String,
-      // unique: true -> Ideally, should be unique, but its up to you
-    },
-    marque: String,
-    description: String
-  },
-  {
-    // this second object adds extra properties: `createdAt` and `updatedAt`
-    timestamps: true,
-  }
-);
-*/
 

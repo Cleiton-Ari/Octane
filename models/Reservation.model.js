@@ -9,8 +9,8 @@ const reservationSchema = new mongoose.Schema(
     {
         userId:{type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null},
         jetskiId:{type: mongoose.Schema.Types.ObjectId, ref: 'Jetski', default: null},
-        date: { type: Date }
-
+        fromDate: { type: Date },
+        toDate : {type: Date}
    
     },
 );

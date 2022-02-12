@@ -9,7 +9,7 @@ const jetskiSchema = new Schema(
       type: String,
       // unique: true -> Ideally, should be unique, but its up to you
     },
-    marque: String,
+    make: String,
     description: String
   },
   {

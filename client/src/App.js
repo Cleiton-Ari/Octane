@@ -8,10 +8,6 @@ import React, { Component } from "react";
 
 
 
-
-
-
-
 function App() {
   return (
     <div className="App">
@@ -20,7 +16,7 @@ function App() {
        <Route  path="/" exact component={HomePage} />
        <Route  path="/signup" exact component={Signup} />
        <Route  path="/login" exact component={Login} />
-       
+     
      </Switch>
     
     </div>

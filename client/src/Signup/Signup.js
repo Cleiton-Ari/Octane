@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import NavBar from '../NavBar/Navbar';
 import Footer from '../Footer/Footer';
+import axios from "axios";
 
 
 class Signup extends Component {
@@ -12,25 +13,33 @@ class Signup extends Component {
         password:"",
     }
 
-    handleFormSubmit = (event)=>{
+    handleFormSubmit = (event)=>{ // submit du formulaire
         event.preventDefault();
-        const firstname= this.state.firstname;
-        const lastname= this.state.lastname;
-        const email= this.state.email;
-        const password= this.state.password;
+        axios.post('http://localhost:5005/api/signup', this.state)
+            .then(response =>{
+                console.log(response);
+            })
+
+            .catch(error =>{
+                console.log(error);
+            })
+
+       
     }
-    handleChange = (event) =>{
+    handleChange = (event) =>{ /// définnir un nouvel etat dans le state
         const name = event.target.name;
         const value = event.target.value;
         this.setState({
             [name]:value
         })
-        
+
     }
    
     render(){
+
         return(
             <div>
+
             <NavBar />  
                 <h1>Sign up</h1>
 
@@ -68,10 +77,12 @@ class Signup extends Component {
                     </label>
                     </p>
 
-                    <button>INSCRIPTION</button>
+                    <button>SIGNUP</button>
+
 
 
                     </form>
+                <Footer />   
             </div>
         )
     }

@@ -3,44 +3,43 @@ const Jetski = require("../models/Jetski.model");
 const Reservation = require('../models/Reservation.model')
 
 
-router.get("/jetski", (req, res) => {
+router.get("/jetski", (req, res, next) => {
     
-    Jetski.find({})
-    .then( jetskis => {
-        res.json({jetskis :jetskis })
+    Jetski.find({}) // trouver les jetskis dans lpa DB
+    .then( jetskisFromDb => {
+        res.status(200).json({jetskiList : jetskisFromDb });
+        return;
     })
     .catch( error => {
-        res.json({ errorMessage: error.message })
+        res.status(400).json({ errorMessage: error.message })
     })
 
 });
 
-
-router.get("/jetski/:id", (req, res) => {
-    const jetskiId = req.params.id
-    
-    Jetski.findById(jetskiId)
-    .then( jetski => {
-        res.json({jetski})
+//create Jetski on the database 
+router.post('/jetski', (req, res, next) => {
+    const {photo, make, description} = req.body;
+    if (!photo || !make || !description) {
+        res.status(400).json({Message: "All fields are required"});
+        return;
+        }
+    Jetski.create({
+        photo,
+        make,
+        description
     })
-    .catch( error => {
-        res.json({ errorMessage: error.message })
-    })
-    
-});
+        .then(createdJetski => {
+            console.log(createdJetski);
+            res.status(200).json({Message: `Jetski created: ${createdJetski}`});
+            return;
+        })
+        .catch(error => {
+            res.status(400).json({erroMessage: "error creating Jetski"});
+            return;
+        })
+
+    });
 
 
-router.post("/reservation", (req, res) => {
-    const { date, jetskiId } = req.body
-    const userId = req.session.user._id
-
-    Reservation.create({userId, date, jetskiId})
-    .then( createdReservation => {
-        res.status(200).json({createdReservation})
-    })
-    .catch(error => {
-        res.json({ errorMessage: error.message })
-    })
-})
 
 module.exports = router;

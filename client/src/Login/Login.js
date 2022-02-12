@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import NavBar from '../NavBar/Navbar';
@@ -6,16 +7,29 @@ import NavBar from '../NavBar/Navbar';
 class Login extends React.Component {
     state = {
         email:"",
-        password:"",
-
-        error: ""
+        password:""
 }
 
  handleFormSubmit = (event)=>{
             event.preventDefault();
-            const email= this.state.email;
-            const password= this.state.password;
-            const error = this.state.error;
+            // submit username and password to server
+            axios.post('http://localhost:5005/api/auth/login', this.state)
+            .then(response =>{
+              console.log(response)
+            })
+
+            .catch(error =>{
+              console.log(error)
+            })
+            
+}
+  handleChange = (event) =>{  
+    // prendre l'input de client et changer la state
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [name] : value
+    })
 }
        
 render(){
@@ -42,6 +56,8 @@ render(){
                 <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
               </label>
             </p>
+
+            <button>LOGIN</button>
 
           </form>
         </div>

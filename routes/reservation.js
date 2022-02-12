@@ -2,6 +2,7 @@ const router = require("express").Router();
 const jetski = require("../models/Jetski.model");
 const User = require("../models/User.model");
 const Reservation = require("../models/Reservation.model");
+const { estimatedDocumentCount } = require("../models/User.model");
 
 
 
@@ -47,6 +48,24 @@ router.post("/reservation", (req, res, next) => {
 })
 
 
+router.get("/reservation/:id", (req, res, next) =>{
+    //accessing the root params "id" passed in the route stored in req.params.id
+    const reservationId = req.params.id;
+    Reservation.findById({_id:reservationId})
+        .then(reservationFromDb =>{
+            res.status(200).json({reservationFromDb});
+            return;
+        })
 
+        .catch(error =>{
+            res.status(400).json({errorMessage: error.message});
+            return;
+        })
+
+})
 
 module.exports = router;
+
+///get reservation +> la liste des reservations (details + id la date...)
+//post reservation => resever une session -> creastion avec id
+//Qr code => liens (une route vers les infos du reservation)

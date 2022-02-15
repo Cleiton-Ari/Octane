@@ -10,7 +10,7 @@ function HomePage() {
     return(
         <div>
         <Carousel /> 
-        <Footer />    
+         
         </div>
     )
 }

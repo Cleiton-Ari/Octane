@@ -6,7 +6,8 @@ import Login from './Login/Login.js';
 import {Switch, Route} from 'react-router-dom'
 import React, { Component } from "react";
 import NavBar from './NavBar/Navbar';
-import MapContainer from "../src/Footer/MapContainer";
+
+import Footer from './Footer/Footer';
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
        <Route  path="/login" exact component={Login} />
      
      </Switch>
-    <MapContainer/>
+    
+    <Footer />  
     </div>
   );
 }

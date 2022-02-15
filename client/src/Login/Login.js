@@ -37,29 +37,29 @@ class Login extends React.Component {
        
 render(){
     return(
-        <div className="form">
+        <div className="ctn-form">
          
           <h1>Log in</h1>
 
           <p>Please enter your email and password!</p>
 
           <form onSubmit={this.handleFormSubmit}>
-                <div className="form">
+                <div className="form-input">
                   <label className="label">Email</label>
-                  <div className="control">
+                  
                   <input type="email:" name="email" value={this.state.email} onChange={this.handleChange} />
-                  </div>
+                  
                 </div>
 
-                <div class="form">
+                <div className="form-input">
                   <label className="label">Password</label>
-                  <div className="control">
+                  
                   <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
-                  </div>
+                 
                 </div>
             <button>LOGIN</button>
           </form>
-          <Footer /> 
+          
         
         </div>
     )

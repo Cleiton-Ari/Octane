@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import NavBar from '../NavBar/Navbar';
 import Footer from '../Footer/Footer';
 import axios from "axios";
+import "./Signup.css";
+ 
 
 
 class Signup extends Component {
@@ -38,8 +40,9 @@ class Signup extends Component {
     render(){
 
         return(
-            <div> 
+            <div className="form"> 
                 <h1>Sign up</h1>
+                
 
                     <p>INCRIVEZ-VOUS AVEC...</p>
 
@@ -47,43 +50,45 @@ class Signup extends Component {
 
                     <form onSubmit={this.handleFormSubmit}>
 
-                    <p>
-                    <label>
-                        <em>Firstname: </em>
-                        <input type="text" name="firstname" value={this.state.firstname} onChange={this.handleChange} />
-                    </label>
-                    </p>
+                        <div className="form">
+                        <label className="label">Firtname</label>
+                        <div className="control">
+                            <input type="firstname" name="firstname" value={this.state.firstname} onChange={this.handleChange} />
+                        </div>
+                        </div>
 
-                    <p>
-                    <label>
-                        <em>lastname: </em>
-                        <input type="text" name="lastname" value={this.state.lastname} onChange={this.handleChange} />
-                    </label>
-                    </p>
+                        <div className="form">
+                        <label className="label">Lastname</label>
+                        <div className="control">
+                            <input type="lastname" name="lastname" value={this.state.lastname} onChange={this.handleChange} />
+                        </div>
+                        </div>
 
-                    <p>
-                    <label>
-                        <em>email: </em>
-                        <input type="text" name="email" value={this.state.email} onChange={this.handleChange} />
-                    </label>
-                    </p>
-
-                    <p>
-                    <label>
-                        <em>Password: </em>
-                        <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
-                    </label>
-                    </p>
-
-                    <button>SIGNUP</button>
+                        <div className="form">
+                        <label className="label">Email</label>
+                        <div className="control">
+                            <input type="email" name="email" value={this.state.email} onChange={this.handleChange} />
+                        </div>
+                        </div>
 
 
+                        <div className="form">
+                        <label className="label">Password</label>
+                        <div className="control">
+                            <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
+                        </div>
+                        </div>
+
+                        <button>SIGNUP</button>
 
                     </form>
-                <Footer />   
+ 
+                <Footer /> 
+               
             </div>
         )
     }
 }
 
 export default Signup;
+

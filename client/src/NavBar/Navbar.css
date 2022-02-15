@@ -2,9 +2,7 @@ nav{
     height: 300px;
 }
 
-img {
-    height: 50%;
-}
+
 
 
 .liste{
@@ -21,7 +19,8 @@ img {
 
 .items{
     cursor: pointer;
-    background-color: white;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .items > link{

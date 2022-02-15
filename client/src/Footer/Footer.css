@@ -1,0 +1,19 @@
+
+
+
+.follow-us{
+    background: red;
+    padding: 30px;
+   
+    
+}
+
+.footer{
+    display: flex;
+    margin: 10px;
+}
+
+
+.follow-us > img{
+    width: 20px;
+}

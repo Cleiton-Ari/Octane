@@ -5,11 +5,11 @@ import logo from './carousel.jpeg'
 
 function Carousel() {
     return(
-        <>
+        <div>
             <img src={logo} alt= "logo" className="carousel" />
 
-            <p>VIBREZ SUR NOS PLAGES CAPVERDIENNES</p>
-        </>
+            <p>VENEZ VIBREZ SUR NOS PLUS PLAGES C</p>
+        </div>
     )
    
 }

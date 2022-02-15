@@ -1,7 +1,10 @@
 import axios from "axios";
 import React, { Component } from "react";
+import bulma from "react";
 import {Link} from 'react-router-dom';
+import Footer from '../Footer/Footer';
 import NavBar from '../NavBar/Navbar';
+import "./Login.css";
 
 
 class Login extends React.Component {
@@ -34,31 +37,30 @@ class Login extends React.Component {
        
 render(){
     return(
-        <div>
-       
+        <div className="form">
+         
           <h1>Log in</h1>
 
-          <p>Vous avez un compte? Connectez-vous.</p>
+          <p>Please enter your email and password!</p>
 
           <form onSubmit={this.handleFormSubmit}>
+                <div className="form">
+                  <label className="label">Email</label>
+                  <div className="control">
+                  <input type="email:" name="email" value={this.state.email} onChange={this.handleChange} />
+                  </div>
+                </div>
 
-            <p>
-              <label>
-                <em>email: </em>
-                <input type="email:" name="email" value={this.state.email} onChange={this.handleChange} />
-              </label>
-            </p>
-
-            <p>
-              <label>
-                <em>Password: </em>
-                <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
-              </label>
-            </p>
-
+                <div class="form">
+                  <label className="label">Password</label>
+                  <div className="control">
+                  <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
+                  </div>
+                </div>
             <button>LOGIN</button>
-
           </form>
+          <Footer /> 
+        
         </div>
     )
   

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import logo from './logo-octane.jpg'
+import logo from './logo-octane2.jpg'
 import "./Navbar.css";
  
 function Navbar() {

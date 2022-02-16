@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import logo from './logo-octane.jpg'
 import "./Navbar.css";
  
-
 function Navbar() {
-    return(
+    return (
         <nav>
            
             <ul className="liste">
@@ -28,7 +27,3 @@ function Navbar() {
 
 
 export default Navbar;
-
-
-            
-        

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import array from "lodash/array";
+import {CircularProgress} from "react-cssfx-loading";
 
 class Reservation extends React.Component {
   state = {
@@ -20,19 +20,35 @@ class Reservation extends React.Component {
         });
       })
       .catch((error) => {
-        console.log(error);
+        console.log("here is the error ",error);
       });
   };
 
   render = () => {
-    console.log(this.state.reservationList[0]?._id);
-
-    if (this.state.reservationList.length <= 0) return "loading...";
+    if (this.state.reservationList.length === 0) {
+      console.log('i am here')
+      return (
+        <>
+        <div className="loading-container" style={{display: "flex"}}>
+            < CircularProgress style={{margin: "auto"}}/>
+        </div>
+        
+        <div></div>
+        </>
+      )
+    }
 
     return (
       <>
         {this.state.reservationList.map(function (el) {
-          return <li></li>;
+          return (
+            <div className="reservations-container">
+              <li key={el._id}>{el._id}</li>
+              <li> user ID: {el.userId}</li>
+              <li>from date: {el.fromDate}</li>
+              <li>to date: {el.toDate}</li>
+            </div>
+          );
         })}
       </>
     );

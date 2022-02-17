@@ -9,15 +9,25 @@ const { estimatedDocumentCount } = require("../models/User.model");
 
 // reservation jour et heure
 router.get("/reservation", (req, res, next) => {
- Reservation.find({})
-    .then(reservationFromDb =>{
-        res.status(200).json( {reservationList : reservationFromDb});
-        return;
-    })
-    .catch(error => {
-        res.status(400).json({errorMessage: error.message});
-        return;
-    })
+    setTimeout(() => {
+        Reservation.find({})
+        .then(reservationFromDb =>{
+            res.status(200).json( {reservationList : reservationFromDb});
+            return;
+        })
+        .catch(error => {
+            res.status(400).json({errorMessage: error.message});
+            return;
+        })}, 5000)
+    // Reservation.find({})
+    // .then(reservationFromDb =>{
+    //     res.status(200).json( {reservationList : reservationFromDb});
+    //     return;
+    // })
+    // .catch(error => {
+    //     res.status(400).json({errorMessage: error.message});
+    //     return;
+    // })
 })
 
 

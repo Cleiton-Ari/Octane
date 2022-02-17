@@ -10,6 +10,7 @@ import Static from "./Static/Static";
 import Capvert from "./Capvert/Capvert";
 import Experience from "./Experience/Experience";
 import Panier from "./Panier/Panier";
+import Reservation from "./Reservation/Reservation";
 
 function App() {
   return (
@@ -17,13 +18,13 @@ function App() {
       <NavBar />
       <Switch>
         <Route path="/" exact component={HomePage} />
-        <Route path="/signup" exact component={Signup} />
-        <Route path="/login" exact component={Login} />
-        <Route path="/static" exact component={Static} />
-        <Route path="/capvert" exact component={Capvert} />
-        <Route path="/experience" exact component={Experience} />
-        <Route path="/panier" exact component={Panier} />
-
+        <Route path="/signup" component={Signup} />
+        <Route path="/login" component={Login} />
+        <Route path="/static" component={Static} />
+        <Route path="/capvert" component={Capvert} />
+        <Route path="/experience" component={Experience} />
+        <Route path="/panier" component={Panier} />
+        <Route path="/reservation" component={Reservation} />
       </Switch>
       <Footer />
     </div>

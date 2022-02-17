@@ -1,0 +1,43 @@
+.demi{
+    text-align: center;
+    background: darkblue;
+    color: white;
+    margin: 0 auto;
+    display: inline-flex;
+    
+}
+
+.block1{
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.pictures{
+    display: flex;
+    
+    margin-bottom: 70px;
+}
+
+.pictures > img{
+    max-width: 300px;
+    max-height: 200px;
+    margin: 0 auto;
+    
+}
+
+.static > img{
+   background-color: limegreen;
+}
+
+
+.text{
+    line-height: 30px;
+    text-align: center;
+    background: lightgray;
+    color: white;
+    margin: auto;
+}
+

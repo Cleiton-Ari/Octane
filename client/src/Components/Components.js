@@ -12,6 +12,7 @@ const Components = () => {
     <div className="component">
 
         <h2>DECOUVREZ NOS OFFRES</h2>
+        
         <Link to="/locations">
         <p>Locations</p>
             <div className='locationsjet'>

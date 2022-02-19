@@ -8,22 +8,34 @@ import './OctaneCalendar.css';
 //component to display reservations on the calendar.
 class OctaneCalendar extends React.Component {
     state = {
-        // reservationList: [],
-        reservationList : {
-            0: [1, 2, 3, 4, 5, 6, 7],
-            1: [2, 4, 4, 4, 6 ,7 ,8 , 9, 10],
-            2: [3, 4, 5, 6]
-        
-        },
-        chosenDate: "",
-        testDate: "2022-02-20 15:00:00.000"
+        reservationList : {},
+        chosenDate: ""
     }
 
+    componentDidMount = (props) => {
+        const reservationRaw = this.props.reservationsFromServer
+        let formattedReservations = {}
+        reservationRaw.map(el => {
+                const resMonth = new Date(el.fromDate).getMonth();
+                const resDay = new Date(el.fromDate).getDate();
+                if (formattedReservations[resMonth]) {
+                    formattedReservations[resMonth].push(resDay);
+                } else {
+                    formattedReservations[resMonth] = [resDay];
+                }
+                
+            })
+        this.setState({
+            reservationList: formattedReservations
+        })
+        return;
+    }
+    
     onChangeDate = (value, event) => {
         event.preventDefault();
         const formattedDate = format(value, 'YYYY-MM-DDThh:mm:ss.SSS'); 
         this.setState({
-            chosenDate: value
+            chosenDate: formattedDate
         }) 
     }
 

@@ -14,6 +14,7 @@ class Reservation extends React.Component {
 
   componentDidMount = () => {
     // control the life cycle of the react component> to send info from the back to the front.
+    //TODO: for better performance; API should return a range of reservations. ex. for upcoming two months
     axios
       .get("http://localhost:5005/api/reservation")
       .then((response) => {
@@ -40,7 +41,7 @@ class Reservation extends React.Component {
 
     return (
       <>
-        <OctaneCalendar />
+        <OctaneCalendar reservationsFromServer={this.state.reservationList} />
       </>
     );
   };

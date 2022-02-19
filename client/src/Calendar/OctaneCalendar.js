@@ -27,6 +27,7 @@ class OctaneCalendar extends React.Component {
         }) 
     }
 
+    //disable tiles for alerady reserved dates
     disableDate = ({date, view}) => {
         if (view === 'month') {
             if (this.state.reservationList[date.getMonth()] && this.state.reservationList[date.getMonth()].find(el => el === date.getDate())) return true;

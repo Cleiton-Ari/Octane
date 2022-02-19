@@ -3,6 +3,8 @@ import React from "react";
 import {CircularProgress} from "react-cssfx-loading";
 import OctaneCalendar from  "../Calendar/OctaneCalendar";
 
+
+//component to make reservations
 class Reservation extends React.Component {
   state = {
     Firstname: "",

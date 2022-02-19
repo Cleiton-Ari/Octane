@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
-import array from "lodash/array";
 import {CircularProgress} from "react-cssfx-loading";
+import OctaneCalendar from  "../Calendar/OctaneCalendar";
 
 class Reservation extends React.Component {
   state = {
@@ -38,13 +38,7 @@ class Reservation extends React.Component {
 
     return (
       <>
-        {this.state.reservationList.map(function (el) {
-          return <div key={el._id}>
-              <li>{el.jetskiId}</li>
-              <li>{el.fromDate}</li>
-              <li>{el.toDate}</li>
-          </div>;
-        })}
+        <OctaneCalendar />
       </>
     );
   };

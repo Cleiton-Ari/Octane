@@ -1,0 +1,9 @@
+.carte{
+    display: flex;
+    padding: 10px;
+}
+
+.carte > img {
+    max-width: 400px;
+    max-height: 400px; 
+}

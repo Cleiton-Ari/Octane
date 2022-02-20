@@ -3,7 +3,9 @@
     background: lightgray;
 }
 
-.access >img{
-    max-width: 5px;
-    max-height: 5px;  
+.access > img { 
+    margin-top: 10px;
+    max-width: 30px;
+    max-height: 30px;
+    padding: 2px;
 }

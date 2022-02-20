@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './panier.png';
 import logo1 from './jet.png';
-import logo2 from './capvert.jpeg';
+import logo2 from './capvert.png';
 import {Link} from 'react-router-dom';
 import './QuickAccess.css';
  

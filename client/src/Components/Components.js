@@ -10,9 +10,8 @@ import './Components.css';
 const Components = () => {
     return (
     <div className="component">
-
         <h2>DECOUVREZ NOS OFFRES</h2>
-        
+        <div className="carre">
         <Link to="/locations">
         <p>Locations</p>
             <div className='locationsjet'>
@@ -20,7 +19,7 @@ const Components = () => {
             </div>
         </Link>
 
-        <h2>SABURA LIFE</h2>
+        <h3>SABURA LIFE</h3>
         <Link to="/saburalife">
             <div className='saburalife'>
                 <img src={logo1} alt="sabura" />
@@ -28,6 +27,8 @@ const Components = () => {
             </div>
         </Link>
  
+        </div>
+        
     </div> 
                 
     )

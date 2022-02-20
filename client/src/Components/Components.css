@@ -7,3 +7,12 @@ h2{
     text-align: center;
     color:darkblue;
 }
+
+.carre{
+    display: flex;
+    justify-content: space-around;
+}
+
+h3{
+    align-items: baseline;
+}

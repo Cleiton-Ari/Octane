@@ -1,6 +1,7 @@
 img{
     height: 500px;
     width: 100%; 
+   
 }
 
 h2{
@@ -11,8 +12,10 @@ h2{
 .carre{
     display: flex;
     justify-content: space-around;
+    height: 500px;
+    width: 100%; 
 }
 
 h3{
-    align-items: baseline;
+    align-items: flex-end;
 }

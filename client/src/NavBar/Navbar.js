@@ -11,7 +11,7 @@ function Navbar() {
           <img src={logo} alt="logotest" className="navbar-logo" />
         </Link>
         <li className="items">
-          <Link to="/Blog">Blog</Link>
+          <Link to="/Capvert">Blog</Link>
         </li>
 
         <li className="items">

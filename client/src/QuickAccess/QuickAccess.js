@@ -14,8 +14,6 @@ panier => class component avec state.
 
 */
 
-
-
 const QuickAccess = () => {
     return (
     <div className="access">

@@ -1,11 +1,23 @@
 .access{
     display: flex;
-    background: lightgray;
+    background: #A3AAAF;
+    width: 100%;
+    justify-content: space-between;
+    height: 50px;
 }
 
-.access > img { 
-    margin-top: 10px;
+img { 
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
     max-width: 30px;
-    max-height: 30px;
-    padding: 2px;
+    max-height: 30px; 
+    margin:auto;
 }
+
+.imgs{
+    align-items: center;
+    display: flex;
+    width: 33%;
+}
+

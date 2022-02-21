@@ -1,6 +1,7 @@
-.carousel{
-    height: 20px;
-    width: 20px;
-    object-fit: cover;
-    background-position: 50% 30%;
+.slideContainer {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+  background-position: 50% 30%;
+  display: center;
 }

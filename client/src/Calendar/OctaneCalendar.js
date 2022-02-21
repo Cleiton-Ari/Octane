@@ -4,6 +4,12 @@ import {format, parse} from 'fecha';
 import 'react-calendar/dist/Calendar.css';
 import './OctaneCalendar.css';
 
+//TODO: 
+    //add button to submit date chosen by client
+    //method onClick button post request with reservation
+    //get ClientID, jetSkiId props and generate toDate => post request
+
+
 
 //component to display reservations on the calendar.
 class OctaneCalendar extends React.Component {

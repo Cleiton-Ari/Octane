@@ -4,8 +4,18 @@
   object-fit: cover;
   background-position: 50% 30%;
   display: center;
+  
+
 }
 
-.images{
+.slideImages{
   height: 300px;
+  
+
+ 
 }
+
+.indicators{
+display: flex;
+justify-content: flex-end;
+  }

@@ -1,7 +1,6 @@
 img{
     height: 500px;
-    width: 100%; 
-   
+    width: 100%;  
 }
 
 h2{
@@ -14,8 +13,9 @@ h2{
     justify-content: space-around;
     height: 500px;
     width: 100%; 
+    margin-bottom: 40px;
 }
 
 h3{
-    align-items: flex-end;
+     align-items: flex-end;
 }

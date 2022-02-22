@@ -5,7 +5,7 @@ import Carousel from '../Carousel/Carousel';
 
 import QuickAccess from '../QuickAccess/QuickAccess';
 
-import Components from '../Components/Components';
+import Explore from '../Explore/Explore';
 
 
 
@@ -14,7 +14,7 @@ function HomePage() {
         <div>
         <Carousel /> 
         <QuickAccess />
-        <Components />
+        <Explore />
          
         </div>
     )

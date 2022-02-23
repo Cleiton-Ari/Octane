@@ -7,7 +7,7 @@ import QuickAccess from '../QuickAccess/QuickAccess';
 
 import Components from '../Components/Components';
 
-
+import JetSki from '../JetSki/JetSki';
 
 function HomePage() {
     return(
@@ -15,6 +15,7 @@ function HomePage() {
         <Carousel /> 
         <QuickAccess />
         <Components />
+        <JetSki />
          
         </div>
     )

@@ -11,6 +11,7 @@ import Capvert from "./Capvert/Capvert";
 import Experience from "./Experience/Experience";
 import Panier from "./Panier/Panier";
 import Reservation from "./Reservation/Reservation";
+import JetSki from "./JetSki/JetSki";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/experience" component={Experience} />
         <Route path="/panier" component={Panier} />
         <Route path="/reservation" component={Reservation} />
+        <Route path="/jetski" component={JetSki} />
       </Switch>
       <Footer />
     </div>

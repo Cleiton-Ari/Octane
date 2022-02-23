@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    color: darkblue;
+}
+
+.thejets{
+    display: flex;
+}
+
+button{
+    background: darkblue;
+    color: white;
+}

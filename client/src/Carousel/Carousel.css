@@ -1,21 +1,27 @@
 .slideContainer {
-  height: 500px;
+  height: 1100px;
   width: auto;
   object-fit: cover;
-  background-position: 50% 30%;
-  display: center;
+  background-position: 100%;
   
+  
+
 
 }
 
-.slideImages{
-  height: 300px;
-  
+.slides{
+  max-height: 500px;
+  max-width: 4200px;;
+  padding-left: 350px;
 
+  
  
 }
 
-.indicators{
-display: flex;
-justify-content: flex-end;
-  }
+p{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
+  text-align: center;
+  color: aqua;
+
+}

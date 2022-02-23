@@ -1,7 +1,7 @@
 import React from "react";
 import "./Carousel.css";
 import { Link } from 'react-router-dom';
-import leMec from './lemec.jpeg';
+import jet2 from './jet2.jpg';
 import jetsafari from "./jet-ski-safari-9.jpg";
 import jetski1 from "./jetski1.jpg";
 import { Slide } from 'react-slideshow-image';
@@ -10,21 +10,21 @@ import 'react-slideshow-image/dist/styles.css';
 
 const slideImages = [
   {
-    url: leMec,
-    caption: "Le mec",
+    url: jet2,
+    caption: "",
   },
   {
     url: jetsafari,
-    caption: "jetsafari",
+    caption: "",
   },
   {
     url: jetski1,
-    caption: "jetski1",
+    caption: "",
   },
 ];
 
 const properties = {
-    duration: 3000,
+    duration: 4000,
     indicators: true,
     arrows: false,
 }
@@ -32,18 +32,31 @@ const properties = {
 function Carousel() {
     return (
       <div className="slideContainer">
-        <Slide {...properties} >
+        <Slide {...properties}>
           {slideImages.map((slideImage, index) => {
-              return (
-                  <div className="slides" key={slideImage.index}>
-                    <div className="images" style={{'backgroundImage': `url(${slideImage.url})`, height: '300px', backgroundRepeat: 'no-repeat'}}>
-                        <span>{slideImage.caption}</span>
+            return (
+              <div className="slides" key={slideImage.index}>
+                <div
+                  className="images"
+                  style={{
+                    backgroundImage: `url(${slideImage.url})`,
+                    height: "500px",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <span>{slideImage.caption}</span>
+                </div>
               </div>
-                  </div>
-              )
+            );
           })}
         </Slide>
-        <p>VENEZ VIBREZ SUR NOS PLUS PLAGES C</p>
+      
+          <style>
+            @import
+            url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+          </style>
+        
+        <p>VENEZ VIBREZ SUR NOS PLUS PLAGES</p>
       </div>
     );
    

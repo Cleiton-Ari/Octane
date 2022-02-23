@@ -23,7 +23,7 @@ nav{
     
 }
 
-.items >link{
+.items > a{
     color: white;
     text-decoration: none;
 }

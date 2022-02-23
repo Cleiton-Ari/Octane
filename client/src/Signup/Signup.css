@@ -1,18 +1,22 @@
-.form{
-    text-align: center;
-}
-
-form{
-    height: 50vh;
-    width: 50vh;
-    border: 2px solid red;
-    padding: 20px;
-}
-
-.form{
+.formulaire{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+    margin-bottom: 10px;
 }
+
+
+form{
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 50vh;
+    border: 2px solid red;
+    padding: 20px;
+    background: chartreuse;
+  
+}
+
+
 

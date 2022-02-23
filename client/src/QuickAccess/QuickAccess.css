@@ -3,17 +3,21 @@
     background: #A3AAAF;
     width: 100%;
     justify-content: space-between;
-    height: 50px;
+    height: 60px;
+    align-items: center;
 }
 
 .imgs > img{ 
     width: 50px;
     height: auto; 
     margin:auto;
+    justify-content: space-around;
 }
 
 .imgs{
     align-items: center;
     display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 

@@ -1,6 +1,7 @@
 img{
-    height: 500px;
+    height: 300px;
     width: 100%;  
+    margin-top: 15px;
 }
 
 h2{
@@ -14,8 +15,28 @@ h2{
     height: 500px;
     width: 100%; 
     margin-bottom: 40px;
+    text-align: center;
 }
 
 h3{
-     align-items: flex-end;
+    text-align: center;
+    color:darkblue;
+    font-size: 40px;
+    
+}
+
+.carre2{
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    width: 100%; 
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.carre2 > img{
+    height: 300px;
+    margin-left: 120px;
+    margin-right: 500px;
+   
 }

@@ -25,6 +25,17 @@ class JetSki extends React.Component {
         });
         
     }
+
+    reserveButtonClick = () => {
+        // some code
+        //TODO
+            // take userID and JetskiId
+            // send props to reservation compnt
+            //redirect => reservation page.
+
+        console.log('button clicked')
+    }
+    
     render = () => {
         if (this.state.jetskiList.length <= 0){
             return (
@@ -47,7 +58,7 @@ class JetSki extends React.Component {
                     <img src={jetski.photo} alt={jetski.make} />
                         <h4>{jetski.make}</h4>
                         <p>{jetski.description}</p>
-                        <button>Reservez</button>
+                        <button onClick={this.reserveButtonClick}>Reservez</button>
                     </div>
                 )
             })

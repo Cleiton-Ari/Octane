@@ -1,3 +1,4 @@
+//real cmpnt
 import React from 'react';
 import "./JetSki.css";
 import logo from "./Kawasaki.jpeg";

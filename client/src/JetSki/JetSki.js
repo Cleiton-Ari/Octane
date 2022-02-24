@@ -13,6 +13,7 @@ class JetSki extends React.Component {
 
     componentDidMount = () => {
         //axios
+        
     }
     render() {
         return(
@@ -21,18 +22,28 @@ class JetSki extends React.Component {
                 <div className="thejets">
                 <img src={logo} alt="Kawasaki" />
                     <p>Kawasaki</p>
+                    <p>auto gearbox 120 km/h</p>
                     <button>Reservez</button>
                 </div>
 
                 <div className="thejets">
                 <img src={logo1} alt="Seadoo" />
                     <p>Seadoo</p>
+                    <p>spark cdo speed 90 km/h</p>
                     <button>Reservez</button>
                 </div>
 
                 <div className="thejets">
                 <img src={logo2} alt="Yamaha" />
                     <p>Yamaha</p>
+                    <p>250 hp with dual exhaust system max speed 100 km/h</p>
+                    <button>Reservez</button>
+                </div>
+
+                <div className="thejets">
+                <img src={logo2} alt="Yamaha" />
+                    <p>Yamaha</p>
+                    <p>turbo jet 140 km/h</p>
                     <button>Reservez</button>
                 </div>
           </>

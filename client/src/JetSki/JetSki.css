@@ -1,10 +1,13 @@
 h1{
     text-align: center;
-    color: darkblue;
+    color: white;
+    background: darkblue
 }
 
 .thejets{
     display: flex;
+    flex-direction: column;
+    
 }
 
 button{

@@ -23,8 +23,9 @@ router.post('/jetski', (req, res, next) => {
         res.status(400).json({Message: "All fields are required"});
         return;
         }
+        const photoRoute = `${req.url}${photo}`
     Jetski.create({
-        photo,
+        photoRoute,
         make,
         description
     })

@@ -39,7 +39,7 @@ class JetSki extends React.Component {
         }
         return(
           <>
-                 <h1>LOCATIONS</h1>
+                 <h1>LOCATIONSS</h1>
                {
                 this.state.jetskiList.map((jetski) => {
                 return(

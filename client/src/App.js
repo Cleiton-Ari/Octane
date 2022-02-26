@@ -13,24 +13,42 @@ import Panier from "./Panier/Panier";
 import Reservation from "./Reservation/Reservation";
 import JetSki from "./JetSki/JetSki";
 
-function App() {
-  return (
-    <div className="App">
-      <NavBar />
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/login" component={Login} />
-        <Route path="/static" component={Static} />
-        <Route path="/capvert" component={Capvert} />
-        <Route path="/experience" component={Experience} />
-        <Route path="/panier" component={Panier} />
-        <Route path="/reservation" component={Reservation} />
-        <Route path="/jetski" component={JetSki} />
-      </Switch>
-      <Footer />
-    </div>
-  );
+
+class App extends React.Component{
+  state = {
+    userId: "",
+    email: "",
+    jetskiId: ""
+  }
+
+  jetskiHandle = (chosenJetskiId) => {
+    this.setState({
+      jetskiId: chosenJetskiId
+    })
+  }
+
+  render = () => {
+
+    return (
+      <div className="App">
+        <NavBar />
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/login" component={Login} />
+          <Route path="/static" component={Static} />
+          <Route path="/capvert" component={Capvert} />
+          <Route path="/experience" component={Experience} />
+          <Route path="/panier" component={Panier} />
+          <Route path="/reservation" render={(props) => <Reservation {...props} jetskiId={this.state.jetskiId}/>} />
+          <Route path="/jetski" render={(props) => <JetSki {...props} chooseJetski={this.jetskiHandle}/>} />
+        </Switch>
+        <Footer />
+      </div>
+    );
+
+  }
 }
+
 
 export default App;

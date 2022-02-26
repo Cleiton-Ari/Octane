@@ -3,6 +3,7 @@ import React from 'react';
 import "./JetSki.css";
 import axios from "axios";
 import {CircularProgress} from "react-cssfx-loading";
+import { Link } from "react-router-dom";
 
 //component jetski
 class JetSki extends React.Component {
@@ -26,14 +27,10 @@ class JetSki extends React.Component {
         
     }
 
-    reserveButtonClick = () => {
+    reserveButtonClick = (event, props) => {
         // some code
-        //TODO
-            // take userID and JetskiId
-            // send props to reservation compnt
-            //redirect => reservation page.
-
-        console.log('button clicked')
+        const jetskiId = event.target.id
+        this.props.chooseJetski(jetskiId)
     }
     
     render = () => {
@@ -58,7 +55,10 @@ class JetSki extends React.Component {
                     <img src={jetski.photo} alt={jetski.make} />
                         <h4>{jetski.make}</h4>
                         <p>{jetski.description}</p>
-                        <button onClick={this.reserveButtonClick}>Reservez</button>
+                        
+                        <Link to='/reservation'>
+                            <button id={jetski._id} onClick={this.reserveButtonClick}>Reservez</button>
+                        </Link>
                     </div>
                 )
             })
@@ -72,3 +72,9 @@ class JetSki extends React.Component {
 
 
 export default JetSki;
+
+//                          (App) <= (function ) => prop => Jetski
+//                  /         |                \
+//       (reservation)      (JetSki)           (Panier)  
+//                              |
+//                             {JetskiID, userId, jetskiList}

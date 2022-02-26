@@ -7,14 +7,20 @@ import OctaneCalendar from  "../Calendar/OctaneCalendar";
 //component to make reservations
 class Reservation extends React.Component {
   state = {
-    Firstname: "",
+    userId: "",
     email: "",
     reservationList: [],
+    jetskiId: "",
+    reservationDate: ""
   };
 
-  componentDidMount = () => {
+  componentDidMount = (props) => {
     // control the life cycle of the react component> to send info from the back to the front.
     //TODO: for better performance; API should return a range of reservations. ex. for upcoming two months
+    const jetskiId = this.props.jetskiId
+    this.setState({
+      jetskiId: jetskiId
+    })
     axios
       .get("http://localhost:5005/api/reservation")
       .then((response) => {
@@ -27,6 +33,13 @@ class Reservation extends React.Component {
         console.log(error);
       });
   };
+
+
+  handleReservationDate = (chosenDate) => {
+      this.setState({
+        reservationDate: chosenDate
+      })
+  } 
 
   render = () => {
     if (this.state.reservationList.length <= 0) {
@@ -41,11 +54,23 @@ class Reservation extends React.Component {
 
     return (
       <>
-        <OctaneCalendar reservationsFromServer={this.state.reservationList} />
+        <OctaneCalendar reservationsFromServer={this.state.reservationList} reserveDate={this.handleReservationDate}/>
       </>
     );
   };
 }
 
 export default Reservation;
+
+/*
+
+                        (App)
+                        /   \
+                      /    (reservation) state ={jetskiID, userId, date} => post vers reservation 
+              (login) (singup) 
+                  {userId, email}        
+
+
+
+*/
 

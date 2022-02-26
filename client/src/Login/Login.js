@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 import bulma from "react";
-import {Link} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import NavBar from '../NavBar/Navbar';
 import "./Login.css";
@@ -24,6 +24,7 @@ class Login extends React.Component {
             .then(response =>{
               this.props.userHandleChange(response.data.user._id,response.data.user.email)
               console.log(response)
+              this.setState({redirect: '/jetski'})
             })
 
             .catch(error =>{
@@ -41,7 +42,11 @@ class Login extends React.Component {
 }
        
 render(){
-    return(
+  if (this.state.redirect) {
+    return <Redirect to={this.state.redirect}/>
+  }  
+  
+  return(
         <div className="ctn-form">
          
           <h1>Log in</h1>

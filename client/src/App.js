@@ -12,6 +12,7 @@ import Experience from "./Experience/Experience";
 import Panier from "./Panier/Panier";
 import Reservation from "./Reservation/Reservation";
 import JetSki from "./JetSki/JetSki";
+import ReservationDetails from "./ReservationDetails/ReservationDetails";
 
 
 class App extends React.Component{
@@ -53,7 +54,13 @@ class App extends React.Component{
           <Route path="/capvert" component={Capvert} />
           <Route path="/experience" component={Experience} />
           <Route path="/panier" component={Panier} />
-          <Route path="/reservation" render={(props) => <Reservation {...props} jetskiId={this.state.jetskiId}/>} />
+          <Route path="/reservation" render={
+            (props) => <Reservation 
+          {...props} 
+          userId={this.state.userId}
+          email={this.state.email} 
+          jetskiId={this.state.jetskiId}/>} />
+          <Route path="/reservation-details/:id" render={(props) => <ReservationDetails {...props} />}/>
           <Route path="/login" render={(props) => <Login {...props} userHandleChange={this.userHandleLogin}/>} />
           <Route path="/signup" render={(props) => <Signup {...props} userHandleChange={this.userHandleSignup}/>} />
           <Route path="/jetski" render={(props) => <JetSki {...props} chooseJetski={this.jetskiHandle}/>} />

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Link} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import NavBar from '../NavBar/Navbar';
 import Footer from '../Footer/Footer';
 import axios from "axios";
@@ -14,6 +14,7 @@ class Signup extends Component {
         email:"",
         password:"",
         userId:"",
+        redirect: null
     }
 
     handleFormSubmit = (event)=>{ // submit du formulaire
@@ -22,6 +23,7 @@ class Signup extends Component {
             .then(response =>{
                 this.props.userHandleChange(response.data.createdUser._id,response.data.createdUser.email)
                 console.log(response);
+                this.setState({redirect: '/jetski'})
             })
 
             .catch(error =>{
@@ -40,6 +42,9 @@ class Signup extends Component {
     }
    
     render(){
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect}/>
+        }
 
         return(
             <div className="form"> 
@@ -80,7 +85,6 @@ class Signup extends Component {
                             <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
                         </div>
                         </div>
-
                         <button>SIGNUP</button>
 
                     </form>

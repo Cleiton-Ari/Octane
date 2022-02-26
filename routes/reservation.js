@@ -24,6 +24,7 @@ router.get("/reservation", (req, res, next) => {
 
 // reserver une location de jetski
 router.post("/reservation", (req, res, next) => {
+    console.log("I am ehrehrehrehrehr")
     const { userId, jetskiId, fromDate, toDate}  = req.body;
     if (!userId || !jetskiId || !fromDate || !toDate){
         res.status(400).json({Message: "All fields are required"});
@@ -38,7 +39,7 @@ router.post("/reservation", (req, res, next) => {
     })
     .then(createdReservationFromDb => {   //reservation créer
         console.log(createdReservationFromDb);
-        res.status(200).json({Message: createdReservationFromDb});
+        res.status(200).json({createdReservationFromDb});
         return;
     })
     .catch(error => {

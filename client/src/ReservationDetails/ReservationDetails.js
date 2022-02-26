@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import {CircularProgress} from "react-cssfx-loading";
-
+import QRCode from "react-qr-code";
 
 
 
@@ -16,7 +16,8 @@ class ReservationDetails extends React.Component{
         axios.get(`http://localhost:5005/api/reservation/${id}`)
             .then(response => {
                 this.setState({
-                    reservationData: response.data.reservationFromDb
+                    reservationData: response.data.reservationFromDb,
+                    reservationId: id
                 })
             })
             .catch(error => console.log(error))
@@ -41,7 +42,7 @@ class ReservationDetails extends React.Component{
                 <li>Jetski ID: {this.state.reservationData.jetskiId}</li>
                 <li>from : {this.state.reservationData.fromDate}</li>
                 <li>to : {this.state.reservationData.toDate}</li>
-
+                <QRCode value={`http://192.168.1.39:3000/reservation-details/${this.state.reservationId}`} />
             </ul>
             </>
         )

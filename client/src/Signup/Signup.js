@@ -13,12 +13,14 @@ class Signup extends Component {
         lastname:"",
         email:"",
         password:"",
+        userId:"",
     }
 
     handleFormSubmit = (event)=>{ // submit du formulaire
         event.preventDefault();
         axios.post('http://localhost:5005/api/signup', this.state)
             .then(response =>{
+                this.props.userHandleChange(response.data.createdUser._id,response.data.createdUser.email)
                 console.log(response);
             })
 

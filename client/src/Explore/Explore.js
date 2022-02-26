@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './locationsjet.jpeg';
 import logo1 from './saburalife.jpeg';
 import logo2 from './carnaval.jpeg';
+import rate from './rate.png';
 import {Link} from 'react-router-dom';
 import './Explore.css';
  
@@ -20,6 +21,11 @@ const Explore = () => {
             </div>  
         </Link>
 
+            <div className='rate'>
+                <p>lorem iudbd</p>
+                <img src={rate} alt="rate" />
+            </div>
+
         
         <Link to="/saburalife">
             <p>Excursions</p>
@@ -27,6 +33,10 @@ const Explore = () => {
                 <img src={logo1} alt="sabura" />
             </div>
         </Link>
+            <div className='rate'>
+                <p>lorem iudbd</p>
+                <img src={rate} alt="rate" />
+            </div>
         </div>
         
         <h3>Vivez la Sabura life</h3>

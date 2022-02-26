@@ -1,22 +1,81 @@
+body{
+    background-color: #F8F8FF;
+}
+
+.head{
+    background: #003580;
+    color: white;
+    border-radius: 15px;
+    width: 100%;
+    height: 90px;
+    margin-bottom: 500px;
+}
+
+.head > h1 {
+    padding: 30px 15px 30px;
+}
+
+.p{
+    font-size: 25px;
+    font-weight: bold;
+    color: #003580;
+    margin-bottom: 10px;
+}
+
+
 .formulaire{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: 2px;
 }
 
 
 form{
     justify-content: center;
     align-items: center;
-    height: 50vh;
-    width: 50vh;
-    border: 2px solid red;
+    width: 430px;
+    height: 400px;
+    border: 2px solid black;
     padding: 20px;
-    background: chartreuse;
-  
+    margin-bottom: 20%;
+    border-radius: 10px;
 }
 
+button{
+    font-size: 1.3em;
+    margin-top: 8px;
+    padding: 2%;
+    background-color: #003580;;
+    border-radius: 15px;
+    border: none;
+    color: #ffff;
+    cursor: pointer;
+    width: 35%;
+	height: 40px;
+}
 
+.passeport{
+    margin-top: 30px;
+    display: flex;
+}
 
+.passeport > div{
+  
+    width: 150px;
+    border-radius: 3px;
+    padding: 5px 10px 10px 5px;
+    background-color: grey;
+    color: black;
+    text-align: center;
+}
+
+.passeport >div:hover{
+    background-color: rgba(255,255,255,0.47);
+}
+
+.passeport .fb{
+    margin-left: 25px;
+}
+ 

@@ -38,6 +38,21 @@ form{
      border-radius: 15px;
      color: blue
  }*/
+
+ .head{
+    background: #003580;
+    color: white;
+    border-radius: 15px;
+    width: 100%;
+    height: 90px;
+    margin-bottom: 500px;
+}
+
+.head > h1 {
+    padding: 30px 15px 30px;
+}
+
+
  .ctn-form{
     display: flex;
     flex-direction: column;
@@ -49,21 +64,34 @@ form{
 }
 
 input{
-   
     border: 2px solid;
     border-radius: 15px;
-    color: blue;
+    color: black;
 }
 
 form{
-    height: 30vh;
-    border: 2px solid red;
+    width: 430px;
+    height: 400px;
     padding: 20px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 20%;
+}
+
+button{
+    font-size: 1.3em;
+    margin-top: 8px;
+    padding: 2%;
+    background-color: #003580;;
+    border-radius: 15px;
+    border: none;
+    color: #ffff;
+    cursor: pointer;
+    width: 35%;
+	height: 40px;
 }
 
 label{
@@ -74,4 +102,27 @@ label{
 
 .form-input{
     padding-bottom: 20px;
+}
+
+.passeport{
+    margin-top: 30px;
+    display: flex;
+}
+
+.passeport > div{
+  
+    width: 150px;
+    border-radius: 3px;
+    padding: 5px 10px 10px 5px;
+    background-color: grey;
+    color: black;
+    text-align: center;
+}
+
+.passeport >div:hover{
+    background-color: rgba(255,255,255,0.47);
+}
+
+.passeport .fb{
+    margin-left: 25px;
 }

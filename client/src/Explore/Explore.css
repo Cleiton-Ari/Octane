@@ -4,10 +4,7 @@ img{
     margin-top: 15px;
 }
 
-h2{
-    text-align: center;
-    color:darkblue;
-}
+
 
 .carre{
     display: flex;
@@ -18,9 +15,9 @@ h2{
     text-align: center;
 }
 
-h3{
+h3, h2{
     text-align: center;
-    color:darkblue;
+    color: #003580;
     font-size: 40px;
     
 }
@@ -37,6 +34,15 @@ h3{
 .carre2 > img{
     height: 300px;
     margin-left: 120px;
-    margin-right: 500px;
-   
+    margin-right: 500px;  
+}
+
+.carre2 > p {
+  text-align: center;
+}
+
+.rate > img{
+    display: flex;
+    max-height: 40px;
+   max-width: 40px;
 }

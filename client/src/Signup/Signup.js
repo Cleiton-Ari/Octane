@@ -41,14 +41,12 @@ class Signup extends Component {
 
         return(
             <div className="formulaire"> 
-            
-                <h1>Sign up</h1>
+                <div className="head">
+                     <h1>SIGN UP</h1> 
+                </div>
+                 <p className="p">Signup to discover the best aquatic experiences!</p>
                 
-
-                    <p>INCRIVEZ-VOUS AVEC...</p>
-
-                    <p>GOOGLE</p> <p>FACEBOOK</p>
-
+                
                     <form onSubmit={this.handleFormSubmit}>
 
                         <div className="form">
@@ -82,7 +80,14 @@ class Signup extends Component {
 
                         <button>SIGNUP</button>
 
+                        <div className="passeport">
+                            <div className="go"> Google</div>
+                            <div className="fb"> Facebook</div>
+                         </div>
+
                     </form>
+
+                    
  
             </div>
         )

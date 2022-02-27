@@ -1,0 +1,14 @@
+.payement{
+position: relative;
+width: 80px;
+background: grey;
+border: 2px solid black;
+}
+
+.loading-container{
+    position: absolute;
+}
+
+.container{
+    display: flex;
+}

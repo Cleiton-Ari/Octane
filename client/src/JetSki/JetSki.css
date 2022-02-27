@@ -1,13 +1,15 @@
 h1 {
     text-align: center;
     color: white;
-    background: darkblue
+    background: darkblue;
+    margin: auto;
 }
 
 .thejets{
     display: flex;
     flex-direction: column;
-    
+    margin: auto; 
+    justify-content: center; 
 }
 
 button{

@@ -69,11 +69,19 @@ class Reservation extends React.Component {
     
     if (this.state.reservationList.length <= 0) {
       return (
-        <>
+        <div className="container-payement">
+
+          <div className="payement">
+          <h6>Finalisez votre choix:</h6>
+          <p>Carte bancaire: choix</p>
+          <p>Date d'expiration:</p>
+          <p>Crypto:</p>
+          </div>
+
           <div className="loading-container" style={{display: "flex"}}>
               <CircularProgress style={{alignItems: "center", margin: "auto"}}/>
           </div>
-        </>
+        </div>
       )
     }
     return (

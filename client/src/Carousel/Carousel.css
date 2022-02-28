@@ -1,6 +1,27 @@
-.carousel{
-    height: 500px;
-    width: 100%;
-    object-fit: cover;
-    background-position: 50% 30%;
+.slideContainer {
+  height: 1100px;
+  width: auto;
+  object-fit: cover;
+  background-position: 100%;
+  
+  
+
+
+}
+
+.slides{
+  max-height: 500px;
+  max-width: 4200px;;
+  padding-left: 350px;
+
+  
+ 
+}
+
+p{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
+  text-align: center;
+  color: aqua;
+
 }

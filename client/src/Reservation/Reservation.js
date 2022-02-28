@@ -36,7 +36,7 @@ class Reservation extends React.Component {
         });
       })
       .catch((error) => {
-        console.log(error);
+        console.log("here is the error ",error);
       });
   };
 
@@ -69,40 +69,27 @@ class Reservation extends React.Component {
     
     if (this.state.reservationList.length <= 0) {
       return (
-        <div className="container-payement">
-
-          <div className="payement">
-          <h6>Finalisez votre choix:</h6>
-          <p>Carte bancaire: choix</p>
-          <p>Date d'expiration:</p>
-          <p>Crypto:</p>
-          </div>
-
-          <div className="loading-container" style={{display: "flex"}}>
-              <CircularProgress style={{alignItems: "center", margin: "auto"}}/>
-          </div>
+        <div className="loading-container" style={{display: "flex"}}>
+          <CircularProgress style={{alignItems: "center", margin: "auto"}}/>
         </div>
+      
       )
     }
     return (
       <>
         <OctaneCalendar reservationsFromServer={this.state.reservationList} reserveDate={this.handleReservationDate}/>
+        <div className="container-payement">
+
+          <div className="payement">
+            <h6>Finalisez votre choix:</h6>
+            <p>Carte bancaire: choix</p>
+            <p>Date d'expiration:</p>
+            <p>Crypto:</p>
+          </div>
+        </div>
       </>
     );
   };
 }
 
 export default Reservation;
-
-/*
-
-                        (App)
-                        /   \
-                      /    (reservation) state ={jetskiID, userId, date} => post vers reservation 
-              (login) (singup) 
-                  {userId, email}        
-
-
-
-*/
-

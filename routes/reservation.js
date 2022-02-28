@@ -66,7 +66,6 @@ router.get("/reservation/:id", (req, res, next) =>{
 })
 
 module.exports = router;
-
 ///get reservation +> la liste des reservations (details + id la date...)
 //post reservation => resever une session -> creastion avec id
 //Qr code => liens (une route vers les infos du reservation)

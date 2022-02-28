@@ -42,7 +42,7 @@ class ReservationDetails extends React.Component{
                 <li>Jetski ID: {this.state.reservationData.jetskiId}</li>
                 <li>from : {this.state.reservationData.fromDate}</li>
                 <li>to : {this.state.reservationData.toDate}</li>
-                <QRCode value={`http://192.168.1.39:3000/reservation-details/${this.state.reservationId}`} />
+                <QRCode value={`http://localhost:3000/reservation-details/${this.state.reservationId}`} />
             </ul>
             </>
         )

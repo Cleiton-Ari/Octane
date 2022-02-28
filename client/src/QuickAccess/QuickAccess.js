@@ -25,7 +25,7 @@ const QuickAccess = () => {
             </div>
         </Link>
 
-        <Link to="/jet">
+        <Link to="/jetski">
             <div className='jet imgs'>
                 <img src={logo1} alt="jet" />
                 <p>100% Experience</p>

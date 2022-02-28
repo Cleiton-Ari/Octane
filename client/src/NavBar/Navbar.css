@@ -7,7 +7,7 @@ nav{
 
 .liste{
     list-style-type: none;
-    background: rgb(5, 149, 233);
+    background: #003580;
     height: 30%;
     display: flex;
     justify-content: space-around;
@@ -20,10 +20,12 @@ nav{
 .items{
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 
-.items > link{
+.items > a{
     color: white;
+    text-decoration: none;
 }
 
 .navbar-logo{

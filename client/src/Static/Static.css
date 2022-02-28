@@ -1,36 +1,31 @@
 .demi{
-    text-align: center;
+    align-items: center;
+    justify-content: center;
     background: darkblue;
     color: white;
     margin: 0 auto;
-    display: inline-flex;
-    
+    display: flex;  
 }
 
 .block1{
     position: relative;
     width: 900px;
     margin: 0 auto;
-    padding: 20px;
-    
+    padding: 20px;   
 }
 
 .pictures{
     display: flex;
-    
     margin-bottom: 70px;
 }
 
 .pictures > img{
     max-width: 300px;
     max-height: 200px;
-    margin: 0 auto;
-    
+    margin: 0 auto;   
 }
 
-.static > img{
-   background-color: limegreen;
-}
+
 
 
 .text{

@@ -48,10 +48,14 @@ render(){
   
   return(
         <div className="ctn-form">
-         
-          <h1>Log in</h1>
 
-          <p>Please enter your email and password!</p>
+        <div className="head">
+            <h1>LOGIN</h1> 
+         </div>
+         
+         
+         <p className="p">Log into your Octane account</p>
+
 
           <form onSubmit={this.handleFormSubmit}>
                 <div className="form-input">
@@ -68,6 +72,11 @@ render(){
                  
                 </div>
             <button>LOGIN</button>
+
+            <div className="passeport">
+                <div className="google"> Google</div>
+                <div className="fb"> Facebook</div>
+            </div>
           </form>
           
         

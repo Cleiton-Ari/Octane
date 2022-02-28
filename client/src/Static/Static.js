@@ -15,7 +15,7 @@ function Static() {
       </p>
       <div className="block1">
         <h3>Sao Pedro</h3>
-        <img src={logo} alt="SaoPedropic" />
+        <img src={logo} alt="SaoPedro" />
       </div>
       
       <h3>Vous aimerez :</h3>

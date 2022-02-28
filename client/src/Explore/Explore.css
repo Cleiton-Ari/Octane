@@ -1,0 +1,48 @@
+img{
+    height: 300px;
+    width: 100%;  
+    margin-top: 15px;
+}
+
+
+
+.carre{
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    width: 100%; 
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h3, h2{
+    text-align: center;
+    color: #003580;
+    font-size: 40px;
+    
+}
+
+.carre2{
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    width: 100%; 
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.carre2 > img{
+    height: 300px;
+    margin-left: 120px;
+    margin-right: 500px;  
+}
+
+.carre2 > p {
+  text-align: center;
+}
+
+.rate > img{
+    display: flex;
+    max-height: 40px;
+   max-width: 40px;
+}

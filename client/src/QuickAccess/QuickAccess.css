@@ -1,9 +1,27 @@
 .access{
     display: flex;
-    background: lightgray;
+    background: #A3AAAF;
+    width: 100%;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
 }
 
-.access >img{
-    max-width: 5px;
-    max-height: 5px;  
+.imgs > img{ 
+    width: 50px;
+    height: auto; 
+    margin:auto;
+    justify-content: space-around;
 }
+
+.imgs{
+    align-items: center;
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.imgs > a{
+    text-decoration: none;
+}
+

@@ -10,7 +10,7 @@ class ReservationDetails extends React.Component{
         reservationData: [],
         reservationId: ""
     }
-
+    
     componentDidMount = (props) => {
         const id = this.props.match.params.id
         axios.get(`http://localhost:5005/api/reservation/${id}`)

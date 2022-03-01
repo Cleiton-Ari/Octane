@@ -16,6 +16,18 @@ require("./config")(app);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+// Serve static files from client/build folder
+app.use(express.static('client/build'));
+
+// For any other routes: serve client/build/index.html SPA
+app.use((req, res, next) => {
+  res.sendFile(`${__dirname}/client/build/index.html`, err => {
+    if (err) next(err)
+  })
+});
+
+
 // 👇 Start handling routes here
 // Contrary to the views version, all routes are controlled from the routes/index.js
 //const allRoutes = require("./routes");

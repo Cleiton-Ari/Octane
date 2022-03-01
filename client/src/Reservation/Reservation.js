@@ -28,7 +28,7 @@ class Reservation extends React.Component {
     })
     
     axios
-      .get("http://localhost:5005/api/reservation")
+      .get(`${process.env.REACT_APP_APIURL || ""}/api/reservation`) 
       .then((response) => {
         // const reservations = _.cloneDeep();
         this.setState({
@@ -55,7 +55,7 @@ class Reservation extends React.Component {
           toDate: this.state.reservationDate
         }
         
-        axios.post("http://localhost:5005/api/reservation", reservation)
+        axios.post(`${process.env.REACT_APP_APIURL || ""}/api/reservation`, reservation) 
           .then((response) => {
             this.setState({redirect: `/reservation-details/${response.data.createdReservationFromDb._id}`})
           })

@@ -10,10 +10,10 @@ class ReservationDetails extends React.Component{
         reservationData: [],
         reservationId: ""
     }
-    
+
     componentDidMount = (props) => {
         const id = this.props.match.params.id
-        axios.get(`http://localhost:5005/api/reservation/${id}`)
+        axios.get(`${process.env.REACT_APP_APIURL || ""}/api/reservation/${id}`) 
             .then(response => {
                 this.setState({
                     reservationData: response.data.reservationFromDb,

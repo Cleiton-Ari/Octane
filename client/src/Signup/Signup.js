@@ -19,7 +19,7 @@ class Signup extends Component {
 
     handleFormSubmit = (event)=>{ // submit du formulaire
         event.preventDefault();
-        axios.post('http://localhost:5005/api/signup', this.state)
+        axios.post(`${process.env.REACT_APP_APIURL || ""}/api/signup`, this.state) 
             .then(response =>{
                 this.props.userHandleChange(response.data.createdUser._id,response.data.createdUser.email)
                 console.log(response);

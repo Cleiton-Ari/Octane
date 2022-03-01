@@ -20,7 +20,7 @@ class Login extends React.Component {
  handleFormSubmit = (event)=>{
             event.preventDefault();
             // submit username and password to server
-            axios.post('http://localhost:5005/api/auth/login', this.state)
+            axios.post(`${process.env.REACT_APP_APIURL || ""}/api/auth/login`, this.state) 
             .then(response =>{
               this.props.userHandleChange(response.data.user._id,response.data.user.email)
               console.log(response)

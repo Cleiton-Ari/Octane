@@ -1,3 +1,4 @@
+
 img{
     height: 300px;
     width: 100%;  
@@ -15,14 +16,18 @@ img{
     text-align: center;
 }
 
+.carre img{
+  box-shadow: 10px 5px 5px rgb(169, 169, 169);
+}
+
 h3, h2{
     text-align: center;
     color: #003580;
-    font-size: 40px;
+    font-size: 30px;
     
 }
 
-.carre2{
+.carnaval{
     display: flex;
     justify-content: space-around;
     height: 500px;
@@ -32,17 +37,30 @@ h3, h2{
 }
 
 .carre2 > img{
+    float: right;
     height: 300px;
     margin-left: 120px;
-    margin-right: 500px;  
+    margin-right: 500px; 
 }
 
 .carre2 > p {
   text-align: center;
 }
 
-.rate > img{
+.location > img{
     display: flex;
     max-height: 40px;
    max-width: 40px;
+}
+
+.location p{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.carre a{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
 }

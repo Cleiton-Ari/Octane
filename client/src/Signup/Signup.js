@@ -49,22 +49,22 @@ class Signup extends Component {
         return(
             <div className="formulaire"> 
                 <div className="head">
-                     <h1>SIGN UP</h1> 
+                     <h1>INSCRIPTION.</h1> 
                 </div>
-                 <p className="p">Signup to discover the best aquatic experiences!</p>
+                 <p className="p">Inscrivez-vous!<br/> Ne ratez aucune activité aquatique</p>
                 
                 
                     <form onSubmit={this.handleFormSubmit}>
 
                         <div className="form">
-                        <label className="label">Firtname</label>
+                        <label className="label">Prénom</label>
                         <div className="control">
                             <input type="firstname" name="firstname" value={this.state.firstname} onChange={this.handleChange} />
                         </div>
                         </div>
 
                         <div className="form">
-                        <label className="label">Lastname</label>
+                        <label className="label">Nom</label>
                         <div className="control">
                             <input type="lastname" name="lastname" value={this.state.lastname} onChange={this.handleChange} />
                         </div>
@@ -79,12 +79,12 @@ class Signup extends Component {
 
 
                         <div className="form">
-                        <label className="label">Password</label>
+                        <label className="label">Mot de passe</label>
                         <div className="control">
                             <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
                         </div>
                         </div>
-                        <button>SIGNUP</button>
+                        <button>S'INSCRIRE</button>
 
                         <div className="passeport">
                             <div className="go"> Google</div>

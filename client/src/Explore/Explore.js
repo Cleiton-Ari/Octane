@@ -1,8 +1,7 @@
 import React from 'react';
 import logo from './locationsjet.jpeg';
-import logo1 from './saburalife.jpeg';
+import logo1 from './turtle.jpeg';
 import logo2 from './carnaval.jpeg';
-import rate from './rate.png';
 import {Link} from 'react-router-dom';
 import './Explore.css';
  
@@ -12,40 +11,41 @@ import './Explore.css';
 const Explore = () => {
     return (
     <div className="component">
-        <h2>DECOUVREZ NOS OFFRES</h2>
+        <h2> NOS OFFRES </h2>
         <div className="carre">
         <Link to="/locations">
             <p>Locations</p>
             <div className='locationsjet'>
                 <img src={logo} alt="locations" /> 
+                <p>30 min de Jet-ski seul, ou entre amis</p>
+                
             </div>  
         </Link>
 
-            <div className='rate'>
-                <p>lorem iudbd</p>
-                <img src={rate} alt="rate" />
-            </div>
+            
 
         
-        <Link to="/saburalife">
+        <Link to="/static">
             <p>Excursions</p>
             <div className='saburalife'>
-                <img src={logo1} alt="sabura" />
+                <img src={logo1} alt="turtle" />
+                <p>Rencontre avec les tortues à São Pedro</p>
             </div>
         </Link>
-            <div className='rate'>
-                <p>lorem iudbd</p>
-                <img src={rate} alt="rate" />
-            </div>
+            
         </div>
         
-        <h3>Vivez la Sabura life</h3>
-        <div className="carre2">
+        <h3>SABURA LIFE: L'ADN DU CAP VERT</h3>
+
+        <div className="carnaval">
             <img src={logo2} alt="carnaval" />
-            <p>Lorem ipsum</p>
+            <h4>Cap sur le Cap Vert!</h4>
+            <p>Un archipel aux milles visages au large du Sénégal. Composé de 10 îles dont
+             neuf<br/>habitées, entre plages de sable blanc, randonnées<br/> et festivités. 
+             Cette ancienne colonie portugaise vous surprendra.</p>
         </div>
-        
-        
+
+         
     </div> 
                 
     )

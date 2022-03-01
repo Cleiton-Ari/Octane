@@ -78,8 +78,8 @@ class Reservation extends React.Component {
     return (
       <>
         <OctaneCalendar reservationsFromServer={this.state.reservationList} reserveDate={this.handleReservationDate}/>
+        
         <div className="container-payement">
-
           <div className="payement">
             <h6>Finalisez votre choix:</h6>
             <p>Carte bancaire: choix</p>

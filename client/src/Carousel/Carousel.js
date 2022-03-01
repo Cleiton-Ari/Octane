@@ -41,6 +41,7 @@ function Carousel() {
                   style={{
                     backgroundImage: `url(${slideImage.url})`,
                     height: "500px",
+                    width: "100%",
                     backgroundRepeat: "no-repeat",
                   }}
                 >
@@ -56,7 +57,7 @@ function Carousel() {
             url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
           </style>
         
-        <p>VENEZ VIBREZ SUR NOS PLUS PLAGES</p>
+        <p className="titre">VENEZ VIBREZ SUR NOS PLUS PLAGES</p>
       </div>
     );
    

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "./logo-octane2.jpg";
+import logo from "./logo_octane_rond.png";
 import "./Navbar.css";
 
 function Navbar() {
@@ -15,10 +15,10 @@ function Navbar() {
         </li>
 
         <li className="items">
-          <Link to="/Signup">Signup</Link>
+          <Link to="/Signup">Inscription</Link>
         </li>
         <li className="items">
-          <Link to="/Login">Login</Link>
+          <Link to="/Login">Connexion</Link>
         </li>
       </ul>
     </nav>

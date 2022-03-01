@@ -3,6 +3,7 @@ import logo  from "./beachsunset.jpeg";
 import logo1 from "./beach sunset.jpeg";
 import logo2 from "./tortues.jpeg";
 import logo3 from "./locationsjet.jpeg";
+import {Link} from 'react-router-dom';
 import './Static.css';
 
 
@@ -23,7 +24,11 @@ function Static() {
       <div className="pictures">
         <img src={logo2} alt="tortue" />
         <img src={logo1} alt="plagesunset" />
+        <Link to="/jetski">
         <img src={logo3} alt="jetski" />
+          <button>Reservez</button>
+        </Link>
+       
       </div>
 
       <p className="text">

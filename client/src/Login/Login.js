@@ -50,11 +50,11 @@ render(){
         <div className="ctn-form">
 
         <div className="head">
-            <h1>LOGIN</h1> 
+            <h1>CONNEXION.</h1> 
          </div>
          
          
-         <p className="p">Log into your Octane account</p>
+         <p className="p">Connectez-vous</p>
 
 
           <form onSubmit={this.handleFormSubmit}>
@@ -66,12 +66,12 @@ render(){
                 </div>
 
                 <div className="form-input">
-                  <label className="label">Password</label>
+                  <label className="label">Mot de passe</label>
                   
                   <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
                  
                 </div>
-            <button>LOGIN</button>
+            <button>CONNEXION</button>
 
             <div className="passeport">
                 <div className="google"> Google</div>

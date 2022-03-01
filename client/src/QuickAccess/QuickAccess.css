@@ -21,7 +21,10 @@
     margin-right: 100px;
 }
 
-.imgs > a{
+.access > a{
     text-decoration: none;
+    padding: 20px;
+    font-size: 17px;
+    color: white;
 }
 

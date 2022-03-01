@@ -46,7 +46,7 @@ class JetSki extends React.Component {
 
         }
         return(
-          <>
+          <div className="jet">
                  <h1>LOCATIONS</h1>
                {
                 this.state.jetskiList.map((jetski) => {
@@ -65,7 +65,7 @@ class JetSki extends React.Component {
                }
                
                
-          </>
+          </div>
         );
     };
 }

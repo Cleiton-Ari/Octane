@@ -3,6 +3,7 @@ h1 {
     color: white;
     background: darkblue;
     margin: auto;
+    padding-top: 15px;
 }
 
 .thejets{
@@ -13,6 +14,12 @@ h1 {
 }
 
 button{
-    background: darkblue;
+    background: dar;
     color: white;
+}
+
+.jet > div{
+   padding-left: 40px;
+   background:lightgray;
+   margin: 10px;
 }

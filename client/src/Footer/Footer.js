@@ -16,9 +16,9 @@ const Footer = () => {
                 <p>Conditions générales</p>
                 <p>Mentions légales</p>
                 <div className="icons">
-                    <img src={logo0} alt="insta" /> 
-                    <img src={logo1} alt="fb" />
-                    <img src={logo2} alt="snap" />
+                   <a href="https://www.instagram.com" target="_blank"><img src={logo0} alt="insta" /> </a> 
+                   <a href="https://www.facebook.com" target="_blank"><img src={logo1} alt="fb" /></a> 
+                   <a href="https://www.snapchat.com" target="_blank"><img src={logo2} alt="snap" /></a>
                 </div>
             </div>
         </footer>

@@ -19,7 +19,9 @@ require("./config")(app);
 app.use(express.static(path.join(__dirname, 'public')));
 
 //adding CORS middlewear => cors header in response
-app.use(cors());
+app.use(cors({
+    origin: 'https://octane-jet.herokuapp.com'
+})); //https://octane-jet.herokuapp.com/
 
 // // Serve static files from client/build folder
 app.use(express.static('client/build'));

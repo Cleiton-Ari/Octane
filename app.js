@@ -4,18 +4,22 @@ require("dotenv/config");
 
 // ℹ️ Connects to the database
 require("./db");
-
 // Handles http requests (express is node js framework)
 // https://www.npmjs.com/package/express
 //const express = require("express");
 const express = require('express');
 const app = express();
 const path = require('path');
+//handling cross origin requests CORS
+const cors = require('cors');
+
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+//adding CORS middlewear => cors header in response
+app.use(cors());
 
 // // Serve static files from client/build folder
 app.use(express.static('client/build'));

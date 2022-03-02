@@ -48,6 +48,7 @@ router.post('/signup', (req, res, next) => {
        
         User.create({ firstname, lastname, email, hashPass })
           .then(createdUser =>{
+            res.header("Access-Control-Allow-Origin", "*");
             res.status(200).json( {createdUser});
             return;
           })

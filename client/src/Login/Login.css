@@ -45,11 +45,12 @@ form{
     border-radius: 15px;
     width: 100%;
     height: 90px;
-    margin-bottom: 500px;
+    margin-top: 20px;
 }
 
 .head > h1 {
     padding: 30px 15px 30px;
+   
 }
 
 

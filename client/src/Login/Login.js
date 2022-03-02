@@ -50,7 +50,7 @@ render(){
         <div className="ctn-form">
 
         <div className="head">
-            <h1>CONNEXION.</h1> 
+            <h1>CONNEXION</h1> 
          </div>
          
          

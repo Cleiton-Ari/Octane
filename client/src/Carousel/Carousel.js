@@ -57,7 +57,7 @@ function Carousel() {
             url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
           </style>
         
-        <p className="titre">VENEZ VIBREZ SUR NOS PLUS PLAGES</p>
+        <p className="titre">VENEZ VIBREZ SUR NOS PLUS BELLES PLAGES</p>
       </div>
     );
    

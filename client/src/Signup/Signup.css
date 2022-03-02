@@ -8,7 +8,8 @@ body{
     border-radius: 15px;
     width: 100%;
     height: 90px;
-    margin-bottom: 500px;
+    margin-bottom: 50px;
+    
 }
 
 .head > h1 {
@@ -20,6 +21,7 @@ body{
     font-weight: bold;
     color: #003580;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 

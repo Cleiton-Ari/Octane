@@ -1,17 +1,19 @@
 .demi{
     align-items: center;
     justify-content: center;
-    background: darkblue;
+    background: #003580;
     color: white;
     margin: 0 auto;
     display: flex;  
+    margin-top: 20px;
 }
 
 .block1{
     position: relative;
     width: 900px;
     margin: 0 auto;
-    padding: 20px;   
+    padding: 20px; 
+    margin-top: 15px;  
 }
 
 .pictures{

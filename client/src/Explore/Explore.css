@@ -1,3 +1,6 @@
+.component > a > p{
+  color: red;
+}
 
 img{
     height: 300px;

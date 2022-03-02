@@ -8,10 +8,12 @@ require("./db");
 // https://www.npmjs.com/package/express
 //const express = require("express");
 const express = require('express');
+const cors = require('cors');
 const app = express();
+app.use(cors());
 const path = require('path');
 //handling cross origin requests CORS
-const cors = require('cors');
+
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
@@ -19,9 +21,9 @@ require("./config")(app);
 app.use(express.static(path.join(__dirname, 'public')));
 
 //adding CORS middlewear => cors header in response
-app.use(cors({
-    origin: 'https://octane-jet.herokuapp.com'
-})); //https://octane-jet.herokuapp.com/
+//app.use(cors({
+  //  origin: 'https://octane-jet.herokuapp.com'
+//})); //https://octane-jet.herokuapp.com/
 
 // // Serve static files from client/build folder
 app.use(express.static('client/build'));
@@ -34,8 +36,9 @@ app.use(express.static('client/build'));
 // Contrary to the views version, all routes are controlled from the routes/index.js
 //const allRoutes = require("./routes");
 //app.use("/api", allRoutes);
+
 const allRoutes = require('./routes');
-app.use('/api', allRoutes);
+app.use('/api', allRoutes,);
 
 const auth = require('./routes/auth');
 app.use('/api', auth);

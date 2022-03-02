@@ -35,7 +35,7 @@ function Carousel() {
         <Slide {...properties}>
           {slideImages.map((slideImage, index) => {
             return (
-              <div className="slides" key={slideImage.index}>
+              <div className="slides" key={slideImage.url}>
                 <div
                   className="images"
                   style={{

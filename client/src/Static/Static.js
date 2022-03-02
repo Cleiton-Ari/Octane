@@ -11,7 +11,7 @@ function Static() {
   return (
     <div className="static">
       <p className="demi">
-        1/2 Journée a Sao Pedro: Venez à la rencontre<br/> des tortues - réservation
+        <strong>1/2 Journée à Sao Pedro:</strong>  Venez à la rencontre des tortues - réservation
         via le centre
       </p>
       <div className="block1">
@@ -19,23 +19,24 @@ function Static() {
         <img src={logo} alt="SaoPedro" />
       </div>
       
-      <h3>Vous aimerez :</h3>
+      <h3>Vous aimerez</h3>
 
       <div className="pictures">
         <img src={logo2} alt="tortue" />
         <img src={logo1} alt="plagesunset" />
-        <Link to="/jetski">
         <img src={logo3} alt="jetski" />
-          <button>Reservez</button>
-        </Link>
+        
        
       </div>
 
       <p className="text">
-        Découvrez toutes nos activités et location de jet-ski que<br/> nous pouvons
+        Découvrez toutes nos activités et location de jet-ski que nous pouvons
         vous proposez sur notre base de cap vert.<br/> Que ce soit pour une virée
-        entre amis ou une simple sortie<br/> en famille, nos équipes vous attendent
-        pour vous faire<br/> vivre de belles sensations sur la Mer Sao Pedro.
+        entre amis ou une simple sortie en famille, nos équipes vous attendent
+        pour vous faire vivre de<br/>  belles sensations sur la Mer Sao Pedro.
+        <Link to="/jetski">
+        <button>Reservez</button>
+        </Link>
       </p>
     </div>
   );

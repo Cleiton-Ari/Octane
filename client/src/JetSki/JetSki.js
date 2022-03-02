@@ -15,7 +15,7 @@ class JetSki extends React.Component {
 
     componentDidMount = () => {
         axios
-        .get(`${process.env.REACT_APP_APIURL || ""}//api/jetski`) 
+        .get(`${process.env.REACT_APP_APIURL || ""}/api/jetski`) 
         .then((response) =>{
             this.setState({
                     jetskiList: response.data.jetskiList,

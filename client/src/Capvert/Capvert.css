@@ -7,10 +7,19 @@ body{
     padding: 10px;
 }
 
+
+.blog{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
 .blog > img {
-    width: 100%;
+    width: auto;
     height: 500px; 
-    justify-content: right;
+    margin: auto;
+    margin-top: 30px;
 }
 .blog >h4{
     color: #003580;

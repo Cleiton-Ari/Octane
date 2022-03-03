@@ -5,7 +5,7 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
-    <nav>
+    <nav className="NavBar">
       <ul className="liste">
         <Link to="./">
           <img src={logo} alt="logotest" className="navbar-logo" />

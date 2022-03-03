@@ -58,16 +58,16 @@ class OctaneCalendar extends React.Component {
         // const date = this.parseFromCalendar();
         
         return (
-        <>
-            <div style={{display: 'flex'}}>
+        <div style={{display: 'flex',  justifyContent: 'center',}}>
+            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop: '20px'}}>
                 <Calendar  
                 onClickDay={this.onChangeDate} 
                 // value="tomorrow"
                 tileClassName={this.tileClassName} 
-                tileDisabled={this.disableDate} style={{alignItems: 'center', margin: 'auto'}}/>
+                tileDisabled={this.disableDate} />
+                <button onClick={this.handleReserveButton} style={{margin: 'auto', marginTop: '10px'}} >Reservez</button>
             </div>
-            <button onClick={this.handleReserveButton}>Reservez</button>
-        </>
+        </div>
 
             
         

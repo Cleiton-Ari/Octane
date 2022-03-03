@@ -7,7 +7,10 @@ function Capvert() {
     return (
       <div>
       <div className="blog">
-      <img src={logo} alt="intro" /> 
+      <div className="intro-img">
+         
+      </div>
+      <img src={logo} alt="intro" />
 
       <h4>A la croisée des trois continents, le Cap Vert un archipel authentique.</h4>
         

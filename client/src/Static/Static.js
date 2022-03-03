@@ -29,15 +29,20 @@ function Static() {
        
       </div>
 
-      <p className="text">
-        Découvrez toutes nos activités et location de jet-ski que nous pouvons
-        vous proposez sur notre base de cap vert.<br/> Que ce soit pour une virée
-        entre amis ou une simple sortie en famille, nos équipes vous attendent
-        pour vous faire vivre de<br/>  belles sensations sur la Mer Sao Pedro.
-        <Link to="/jetski">
-        <button>Reservez</button>
-        </Link>
-      </p>
+      <div className="description">
+            <p className="text">
+              Découvrez toutes nos activités et location de jet-ski que nous pouvons
+              vous proposez sur notre base de cap vert.<br/> Que ce soit pour une virée
+              entre amis ou une simple sortie en famille, nos équipes vous attendent
+              pour vous faire vivre de<br/>  belles sensations sur la Mer Sao Pedro.
+              
+            </p>
+            <Link to="/jetski">
+              <button>Reservez</button>
+              </Link>
+      </div>
+
+      
     </div>
   );
 }

@@ -36,15 +36,13 @@ const Explore = () => {
 
         <div className="carnaval">
             <img src={logo2} alt="carnaval" />
+            <div className="textcarnaval">
+                <h4>Cap sur le Cap Vert!</h4>
+                <p>Un archipel aux milles visages au large du Sénégal. Composé de 10 îles dont
+                neuf<br/>habitées, entre plages de sable blanc, randonnées<br/> et festivités. 
+                Cette ancienne colonie portugaise vous surprendra.</p>
+            </div>
         </div>
-
-        <div className="textcarnaval">
-        <h4>Cap sur le Cap Vert!</h4>
-            <p>Un archipel aux milles visages au large du Sénégal. Composé de 10 îles dont
-             neuf<br/>habitées, entre plages de sable blanc, randonnées<br/> et festivités. 
-             Cette ancienne colonie portugaise vous surprendra.</p>
-        </div>
-
          
     </div> 
                 

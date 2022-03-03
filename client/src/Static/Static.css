@@ -28,15 +28,23 @@
     margin: 0 auto;   
 }
 
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .text{
     line-height: 30px;
     text-align: center;
     background: lightgray;
-    color: white;
+    color: #003580;
     margin: auto;
 }
 
 a > button{
-    width: 35%;
+    width: 120%;
 	height: 40px;
+    
 }

@@ -1,7 +1,7 @@
 .demi{
     align-items: center;
     justify-content: center;
-    background: lightgray;
+    background: #808000;
     color: #003580;
     margin: 0 auto;
     display: flex;  
@@ -10,7 +10,7 @@
 }
 
 .block1{
-    position: relative;
+    
     width: 900px;
     margin: 0 auto;
     padding: 20px; 
@@ -34,13 +34,17 @@
     align-items: center;
 }
 
-
+ h3{
+     font-family: Monolith Light Italic Freebie;
+     font-size: 32px;
+ }
 .text{
     line-height: 30px;
     text-align: center;
     background: lightgray;
     color: #003580;
     margin: auto;
+    font-family: monaco;
 }
 
 a > button{

@@ -1,10 +1,11 @@
 h1 {
     text-align: center;
     color: white;
-    background: #003580;
+    background: #808000;
+    font-family:  Monolith Light Italic Freebie;;
     margin: auto;
     padding-top: 15px;
-    
+    margin-top: 10px;
 }
 
 .thejets{
@@ -15,12 +16,16 @@ h1 {
 }
 
 button{
-    background: dar;
+    background: #003580;
     color: white;
+    font-family:  Monolith Light Italic Freebie;
+    
 }
 
 .jet > div{
    padding-left: 40px;
    background:lightgray;
    margin: 10px;
+   width: auto;
+   height: 300px;
 }

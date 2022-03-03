@@ -1,8 +1,8 @@
 import React from "react";
-import logo  from "./beachsunset.jpeg";
-import logo1 from "./beach sunset.jpeg";
-import logo2 from "./tortues.jpeg";
-import logo3 from "./locationsjet.jpeg";
+import  saopedro  from "./sao-pedro.jpg";
+import beach from "./beach sunset.jpeg";
+import tortue from "./tortues.jpeg";
+import jet from "./locationsjet.jpeg";
 import {Link} from 'react-router-dom';
 import './Static.css';
 
@@ -16,15 +16,15 @@ function Static() {
       </p>
       <div className="block1">
         <h3>Sao Pedro</h3>
-        <img src={logo} alt="SaoPedro" />
+        <img src={saopedro} alt="SaoPedro" />
       </div>
       
       <h3>Vous aimerez</h3>
 
       <div className="pictures">
-        <img src={logo2} alt="tortue" />
-        <img src={logo1} alt="plagesunset" />
-        <img src={logo3} alt="jetski" />
+        <img src={tortue} alt="tortue" />
+        <img src={beach} alt="plagesunset" />
+        <img src={jet} alt="jetski" />
         
        
       </div>

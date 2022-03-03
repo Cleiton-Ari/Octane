@@ -13,7 +13,7 @@ const Explore = () => {
     <div className="component">
         <h2> NOS OFFRES </h2>
         <div className="activity">
-        <Link to="/locations">
+        <Link to="/jetski">
             <p className="loue">Locations</p>
             <div className='locationsjet'>
                 <img src={logo} alt="locations" /> 
@@ -24,7 +24,7 @@ const Explore = () => {
 
         <Link to="/static">
             <p className="loue">Excursions</p>
-            <div className='saburalife'>
+            <div className='locationsjet'>
                 <img src={logo1} alt="turtle" />
                 <p>Rencontre avec les tortues à São Pedro</p>
             </div>

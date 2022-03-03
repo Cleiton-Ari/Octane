@@ -14,6 +14,9 @@ body{
 
 .head > h1 {
     padding: 30px 15px 30px;
+    font-family:  Monolith Light Italic Freebie;
+    font-size: 40px;
+    background: #808000;
 }
 
 .p{
@@ -22,6 +25,7 @@ body{
     color: #003580;
     margin-bottom: 10px;
     text-align: center;
+    font-family:  Monolith Light Italic Freebie;;
 }
 
 
@@ -56,6 +60,7 @@ button{
     cursor: pointer;
     width: 35%;
 	height: 40px;
+    font-family:  Monolith Light Italic Freebie;
 }
 
 .passeport{
@@ -81,3 +86,6 @@ button{
     margin-left: 25px;
 }
  
+.label{
+    font-family: monaco;
+}

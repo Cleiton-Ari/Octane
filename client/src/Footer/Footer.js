@@ -11,7 +11,7 @@ const Footer = () => {
     return(
         <footer className="footer">
             <div className="follow-us">
-                <p>Contactez-Nous?</p>
+                <p>Contactez-Nous</p>
                 <p>Qui sommes-nous?</p>
                 <p>Conditions générales</p>
                 <p>Mentions légales</p>

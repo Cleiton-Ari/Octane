@@ -36,7 +36,7 @@ class ReservationDetails extends React.Component{
         
         return (
             <>
-            <h1>Your reservation details</h1>
+            <h1>Votre réservation</h1>
             <ul>
                 <li>User ID: {this.state.reservationData.userId}</li>
                 <li>Jetski ID: {this.state.reservationData.jetskiId}</li>

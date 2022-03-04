@@ -71,7 +71,7 @@ render(){
                   <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
                  
                 </div>
-            <button>CONNEXION</button>
+            <button className="login-button">CONNEXION</button>
 
             <div className="passeport">
                 <div className="google"> Google</div>

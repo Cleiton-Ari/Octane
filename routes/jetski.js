@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Jetski = require("../models/Jetski.model");
 const Reservation = require('../models/Reservation.model')
-
+const path = require('path');
 
 router.get("/jetski", (req, res, next) => {
     
@@ -18,12 +18,11 @@ router.get("/jetski", (req, res, next) => {
 
 //create Jetski on the database 
 router.post('/jetski', (req, res, next) => {
-    const {photo, make, description} = req.body;
-    if (!photo || !make || !description) {
+    const {photoRoute, make, description} = req.body;
+    if (!photoRoute || !make || !description) {
         res.status(400).json({Message: "All fields are required"});
         return;
         }
-        const photoRoute = `${req.url}${photo}`
     Jetski.create({
         photoRoute,
         make,
@@ -41,5 +40,13 @@ router.post('/jetski', (req, res, next) => {
 
     });
 
+
+router.get('/jetski/:id', (req, res, next) => {
+    console.log('i am here');
+    const imageName = req.params.id
+    res.status(200).sendFile(path.join(__dirname, '../public', `${imageName}.jpeg`))
+    // res.status(200).render(`./public/index.html`)
+    return;
+})
 
 module.exports = router;

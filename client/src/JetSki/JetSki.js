@@ -51,13 +51,13 @@ class JetSki extends React.Component {
                {
                 this.state.jetskiList.map((jetski) => {
                 return(
-                    <div key={jetski._id}>
-                    <img src={jetski.photo} alt={jetski.make} />
+                    <div className="listing" key={jetski._id}>
+                    <img src={`${process.env.REACT_APP_APIURL || ""}/api/jetski/${jetski.photoRoute}`} alt={jetski.make} style={{height:"auto", width:'150px'}}/>
                         <h4>{jetski.make}</h4>
                         <p>{jetski.description}</p>
                         
                         <Link to='/reservation'>
-                            <button id={jetski._id} onClick={this.reserveButtonClick}>Reservez</button>
+                            <button className="reservation-button" id={jetski._id} onClick={this.reserveButtonClick}>Reservez</button>
                         </Link>
                     </div>
                 )

@@ -84,7 +84,7 @@ class Signup extends Component {
                             <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
                         </div>
                         </div>
-                        <button>S'INSCRIRE</button>
+                        <button className="signup-button" >S'INSCRIRE</button>
 
                         <div className="passeport">
                             <div className="go"> Google</div>

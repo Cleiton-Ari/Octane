@@ -1,3 +1,21 @@
 .selectedDate {
-    background-color: green;
+    /* background-color: green; */
+}
+
+.cal-container{
+    color: blue;
+}
+
+.reserve-button{
+    font-size: 20px;
+    margin-top: 8px;
+    padding: 2%;
+    background-color: #003580;;
+    border-radius: 15px;
+    border: none;
+    color: #ffff;
+    cursor: pointer;
+    width: 50%;
+	height: 40px;
+    font-family:  Monolith Light Italic Freebie;
 }

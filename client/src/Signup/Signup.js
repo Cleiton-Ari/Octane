@@ -57,14 +57,14 @@ class Signup extends Component {
                     <form onSubmit={this.handleFormSubmit}>
 
                         <div className="form">
-                        <label className="label">Prénom</label>
+                        <label className="label">Firstname</label>
                         <div className="control">
                             <input type="firstname" name="firstname" value={this.state.firstname} onChange={this.handleChange} />
                         </div>
                         </div>
 
                         <div className="form">
-                        <label className="label">Nom</label>
+                        <label className="label">Lastname</label>
                         <div className="control">
                             <input type="lastname" name="lastname" value={this.state.lastname} onChange={this.handleChange} />
                         </div>
@@ -79,12 +79,12 @@ class Signup extends Component {
 
 
                         <div className="form">
-                        <label className="label">Mot de passe</label>
+                        <label className="label">Password</label>
                         <div className="control">
                             <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
                         </div>
                         </div>
-                        <button className="signup-button" >S'INSCRIRE</button>
+                        <button className="signup-button" >SIGNUP</button>
 
                         <div className="passeport">
                             <div className="go"> Google</div>

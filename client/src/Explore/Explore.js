@@ -14,33 +14,33 @@ const Explore = () => {
         <h2> NOS OFFRES </h2>
         <div className="activity">
         <Link to="/jetski">
-            <p className="loue">Locations</p>
+            <p className="loue">Rentals</p>
             <div className='locationsjet'>
                 <img src={logo} alt="locations" /> 
-                <p>30 min de Jet-ski seul, ou entre amis</p>
+                <p>30 minutes of Jet-skiing alone, or with friends</p>
                 
             </div>  
         </Link>
 
         <Link to="/static">
-            <p className="loue">Excursions</p>
+            <p className="loue">Excursion</p>
             <div className='locationsjet'>
                 <img src={logo1} alt="turtle" />
-                <p>Rencontre avec les tortues à São Pedro</p>
+                <p>Turtles watching in São Pedro</p>
             </div>
         </Link>
             
         </div>
         
-        <h3>SABURA LIFE: L'ADN DU CAP VERT</h3>
+        <h3>SABURA LIFE: Cape Verdean DNA</h3>
 
         <div className="carnaval">
             <img src={logo2} alt="carnaval" />
             <div className="textcarnaval">
-                <h4>Cap sur le Cap Vert!</h4>
-                <p>Un archipel aux milles visages au large du Sénégal. Composé de 10 îles dont
-                neuf<br/>habitées, entre plages de sable blanc, randonnées<br/> et festivités. 
-                Cette ancienne colonie portugaise vous surprendra.</p>
+                <h4>Discover CapVerdean Islands!</h4>
+                <p> An archipelago with multiple faces front of Senegal coast. Made up of 10 islands
+                nine<br/>of which are inhabited, between white sandy beaches, hiking and festivities.<br/> 
+                This former Portuguese colony will surprise you..</p>
             </div>
         </div>
          

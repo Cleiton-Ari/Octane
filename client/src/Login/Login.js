@@ -66,12 +66,12 @@ render(){
                 </div>
 
                 <div className="form-input">
-                  <label className="label">Mot de passe</label>
+                  <label className="label">Password</label>
                   
                   <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
                  
                 </div>
-            <button className="login-button">CONNEXION</button>
+            <button className="login-button">LOGIN</button>
 
             <div className="passeport">
                 <div className="google"> Google</div>

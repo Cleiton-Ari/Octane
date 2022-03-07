@@ -21,7 +21,7 @@ const QuickAccess = () => {
         <Link to="/panier">
             <div className='panier imgs'>
                 <img src={logo} alt="panier" /> 
-                <p> Reservation facile</p>
+                <p>Fast booking</p>
             </div>
         </Link>
 

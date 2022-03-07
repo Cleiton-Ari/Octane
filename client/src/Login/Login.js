@@ -50,11 +50,11 @@ render(){
         <div className="ctn-form">
 
         <div className="head">
-            <h1>CONNEXION</h1> 
+            <h1>LOGIN</h1> 
          </div>
          
          
-         <p className="p">Connectez-vous</p>
+         <p className="p">Login</p>
 
 
           <form onSubmit={this.handleFormSubmit}>

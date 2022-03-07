@@ -11,10 +11,10 @@ const Footer = () => {
     return(
         <footer className="footer">
             <div className="follow-us">
-                <p>Contactez-Nous</p>
-                <p>Qui sommes-nous?</p>
-                <p>Conditions générales</p>
-                <p>Mentions légales</p>
+                <p>Contact Us</p>
+                <p>Who are we?</p>
+                <p>Terms and conditions</p>
+                <p>Legal Notice</p>
                 <div className="icons">
                    <a href="https://www.instagram.com" target="_blank"><img src={logo0} alt="insta" /> </a> 
                    <a href="https://www.facebook.com" target="_blank"><img src={logo1} alt="fb" /></a> 

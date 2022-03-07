@@ -49,9 +49,10 @@ class Signup extends Component {
         return(
             <div className="formulaire"> 
                 <div className="head">
-                     <h1>INSCRIPTION</h1> 
+                     <h1>SIGNUP</h1> 
                 </div>
-                 <p className="p">Inscrivez-vous!<br/> Ne ratez aucune activité aquatique</p>
+                 <p className="p">Sign up!<br/>Don't miss any aquatic activity</p>
+
                 
                 
                     <form onSubmit={this.handleFormSubmit}>
